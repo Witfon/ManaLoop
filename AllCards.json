@@ -1166,7 +1166,7 @@
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
-			"name": "Whist Minion",
+			"name": "Whisp Minion",
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["misc"],
