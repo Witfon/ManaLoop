@@ -1,4 +1,8 @@
 {
+	"maxAbilitySlots": 5,
+	"maxPassiveSlots": 5,
+	"maxItemSlots": 3,
+	
 	"abilities":
 	[
 		{
@@ -698,32 +702,582 @@
 	
 	"passives":
 	[
-	{
-		"name": "Berserker",
-		"rarity": "L",
-		"slotCost": 4,
-		"sortingType": ["mana"],
-		"description": "Your abilities cost 0 mana, but after using an ability gain -1 max mana. When you reach 0 max mana, discard this card.",
-		"stats": ["Unstackable", "", "", ""]
-	},
-	{
-		"name": "Blademaster",
-		"rarity": "C",
-		"slotCost": 1,
-		"sortingType": ["protection"],
-		"actionType": ["basic attack"],
-		"description": "After landing 4 basic attacks on players, gain a shield that will block first external damage that you take (does not charge while you have the shield).",
-		"stats": ["Unstackable", "", "", ""]
-	},
-	{
-		"name": "Glory",
-		"rarity": "C",
-		"slotCost": 1,
-		"sortingType": ["mana"],
-		"description": "Gain +2 max mana when a player dies.",
-		"upgradeText": "+3 max mana on trigger",
-		"stats": ["Stackable", "", "", ""]
-	}
+		{
+			"name": "Berserker",
+			"rarity": "L",
+			"slotCost": 4,
+			"sortingType": ["mana"],
+			"description": "Your abilities cost 0 mana, but after using an ability gain -1 max mana. When you reach 0 max mana, discard this card.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Blademaster",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"actionType": ["basic attack"],
+			"description": "After landing 4 basic attacks on players, gain a shield that will block first external damage that you take (does not charge while you have the shield).",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Glory",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["mana"],
+			"description": "Gain +2 max mana when a player dies.",
+			"upgradeText": "+3 max mana on trigger",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Grove Heart",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["death", "hp", "mana"],
+			"actionType": ["team"],
+			"description": "On death, transfer your remaining mana to another player and heal 2 HP to them.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Explosive Shards",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["death", "summon"],
+			"actionType": ["mine"],
+			"description": "Summon 6 mines on death.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Stackable", "P.Range: 4", "", ""]
+		},
+		{
+			"name": "Pacifist",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"actionType": ["team"],
+			"description": "Your basic attacks and abilities can’t damage allied players.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Lucky Coin",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"actionType": ["verge"],
+			"description": "You can verge twice.",
+			"upgradeText": "You can verge 3 times",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Void Protection",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"actionType": ["void"],
+			"description": "Gain 3 void shields, each expire after taking void damage. Regain all void shields on player kill.",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Explosive End",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["death", "damage"],
+			"actionType": ["aoe"],
+			"description": "Explode on death after your marble stops or hits a non-player entity, dealing 1 damage. Adittional stacks increase S.Range by 1 level but don’t affect damage.",
+			"stats": ["Stackable", "S.Range: 1", "", ""]
+		},
+		{
+			"name": "Mana Barrier",
+			"rarity": "L",
+			"slotCost": 3,
+			"sortingType": ["protection"],
+			"description": "Whenever you takes damage, reduce your max mana equal to damage taken instead of taking HP damage (your max mana acts like adittional HP).",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Rainbow Gem",
+			"rarity": "C",
+			"slotCost": 2,
+			"sortingType": ["hp", "mana"],
+			"hp": 1,
+			"mana": 1,
+			"description": "Increases your max HP and mana by 1.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Mana Gem",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["mana"],
+			"mana": 1,
+			"description": "Increases your max mana by 1.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Spellproof",
+			"rarity": "R",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"description": "You can’t take lethal damage from enemy abilities (you will have 1 hp left). Can’t be combined with Durable and Spiked.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Scrap Shells",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"actionType": ["mine"],
+			"description": "Summon a mine for each point of damage that you take.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Stackable", "P.Range: 3", "", ""]
+		},
+		{
+			"name": "Escape Master",
+			"rarity": "R",
+			"slotCost": 1,
+			"sortingType": ["mobility"],
+			"description": "On escape actions, teleport to any location instead of moving regularly.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Death's Decay",
+			"rarity": "R",
+			"slotCost": 1,
+			"sortingType": ["death"],
+			"description": "Your on-death effects trigger twice. Discard this card after activating your on-death effects.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Azure Cult",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["mana"],
+			"actionType": ["basic attack"],
+			"description": "Restore 1 mana to yourself after landing a basic attack on a player, but enemies don’t have to escape after them (will still trigger mana recovery).",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Crimson Cult",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["hp"],
+			"actionType": ["basic attack"],
+			"description": "Recover 1 HP to yourself after landing a basic attack on a player. Your basic attacks deal no damage (will still trigger escape and mana recovery).",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Mana Cell",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["mana"],
+			"mana": 3,
+			"description": "Increases max mana by 3.",
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Life Cell",
+			"rarity": "C",
+			"slotCost": 2,
+			"sortingType": ["hp"],
+			"hp": 2,
+			"description": "Increases max HP by 2.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Loaded Up",
+			"rarity": "C",
+			"slotCost": 2,
+			"sortingType": ["mana"],
+			"description": "Start the game with fully charged mana.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Magic Shield",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["protection"],
+			"description": "Ignore first external damage that you take.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Challenger",
+			"rarity": "L",
+			"slotCost": 3,
+			"sortingType": ["misc"],
+			"actionType": ["void"],
+			"description": "You don’t need to escape after taking damage. This means that you won’t skip your turn. You still gain mana as if you were escaping.",
+			"upgradeText": "Ignore void damage",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Life Gem",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["hp"],
+			"hp": 1,
+			"description": "Increases your max HP by 1.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Final Accordio",
+			"rarity": "R",
+			"slotCost": 3,
+			"sortingType": ["death", "damage"],
+			"actionType": ["projectile"],
+			"description": "After your marble is destroyed, shoot a penetrating projectile in a straight line that can damage multiple entities (can’t penetrate walls).",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "Range: 4", "", ""]
+		},
+		{
+			"name": "Elemental Resistance",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"actionType": ["void"],
+			"description": "When damaged by a non-player entity, ignore the damage and empty one mana. If you don’t have enough mana, the damage targets your HP.",
+			"upgradeText": "Also applies to void damage",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Shadow Cult",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"actionType": ["void", "mine"],
+			"description": "When a player takes void damage, summon 3 mines.",
+			"stats": ["Stackable", "P.Range: 4", "", ""]
+		},
+		{
+			"name": "Reinforced Shells",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["protection", "summon"],
+			"actionType": ["mine"],
+			"description": "Your mines can only take damage from player impact.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Multispecialist",
+			"rarity": "R",
+			"slotCost": 0,
+			"sortingType": ["misc", "mana"],
+			"description": "Your abilities only take 1 slot and are upgraded, but you can only use each one once. Start the game with 1 loaded mana.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Durable",
+			"rarity": "R",
+			"slotCost": 3,
+			"sortingType": ["protection"],
+			"description": "Your marble can’t take lethal damage from basic attacks (you will have 1 HP left). Can’t stack with Spellproof.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Eagle Eye",
+			"rarity": "L",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"actionType": ["verge", "basic attack"],
+			"description": "Your basic attacks can verge on players.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Spiked",
+			"rarity": "L",
+			"slotCost": 4,
+			"sortingType": ["damage"],
+			"description": "When a player hits you with a basic attack, deal 1 soft damage to them. Can’t stack with Spellproof.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Stackable", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Phoenix Feather",
+			"rarity": "L",
+			"slotCost": 2,
+			"sortingType": ["death", "hp"],
+			"description": "After your marble is destroyed, trigger all on-death effects, respawn anywhere with 1 hp and discard this card (turn skip still counts if the next turn is yours). Stacking increases respawn count.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Protection Seal",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["hp"],
+			"description": "Recover 2 HP and discard this card when you reach full mana.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Faith's Edge",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["death", "summon"],
+			"description": "On death, drop all on-field non-player entities above your marble + 1 summoned mine for each ability, passive and item that you had in your deck at the start. These entities can deal damage and will dissapear after last one of them stops.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "Height: 2-3", "", ""]
+		},
+		{
+			"name": "Scorching Aura",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["misc", "protection"],
+			"description": "Players near your marble are unable to use abilities.",
+			"upgradeText": "Also unable to use items",
+			"stats": ["Unstackable", "A.Range: 2", "", ""]
+		},
+		{
+			"name": "Morphosis",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["hp"],
+			"description": "You can skip a turn without acting or moving (will still give you mana). The following turns that you skip in a succession will regenerate 1 HP to you.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Purification Cult",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["summon", "hp"],
+			"description": "Whenever a player is healed, destroy 3 nearby non-player entities.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Stackable", "A.Range: 4", "", ""]
+		},
+		{
+			"name": "Ichor",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"actionType": ["effect"],
+			"description": "After damaging a player with a basic attack, the next non-player damage that they take will be doubled. Debuff clears after triggering.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Soul Imbune",
+			"rarity": "C",
+			"slotCost": 0,
+			"sortingType": ["mana"],
+			"hp": -1,
+			"mana": 2,
+			"description": "Decreaces your max HP by 1, but increaces your max mana by 2. Can't stack with Force Imbune.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Force Imbune",
+			"rarity": "C",
+			"slotCost": 0,
+			"sortingType": ["hp"],
+			"hp": 1,
+			"mana": -2,
+			"description": "Decreaces your max mana by 2, but increaces your max HP by 1. Can't stack with Soul Imbune.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Void Heart",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["misc", "protection"],
+			"actionType": ["void", "mine"],
+			"description": "Your mines deal void damage (their damage no longer counts as non-player entity damage). You can’t take lethal void damage.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Second Breath",
+			"rarity": "L",
+			"slotCost": 3,
+			"sortingType": ["misc"],
+			"actionType": ["verge"],
+			"description": "All your physical abilities can verge.",
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Scavenger",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"description": "When a player dies during your turn, you get copies of their unused items until end of the game (can overfill your item slots). Also recovers one of your used items if you have available item slots.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Scavenger",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"actionType": ["void"],
+			"description": "This card gains 1 charge whenever a player takes void damage. On 3 charges, discharges and gains a shield that blocks first external damage (this shield can't stack).",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Call for The Stars",
+			"rarity": "L",
+			"slotCost": 1,
+			"sortingType": ["damage", "summon"],
+			"actionType": ["void", "mine"],
+			"description": "Add 1 charge to this card whenever you summon a mine. On 7 charges, discharge and draw lines between all mines until they form a polygon. All players inside the polygon will take 1 void damage (won't trigger escape or mana gain).",
+			"stats": ["Unstackable", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Star in a Jar",
+			"rarity": "R",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"actionType": ["effect"],
+			"description": "Your marble can't be affected by status effects (blind, stun, ichor etc.), unless you use an ability that places a status effect on you during your turn.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Cursed Soul",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"actionType": ["effect", "basic attack"],
+			"description": "When your marble lands a basic attack, blind the target for 1 turn.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Cursed Body",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"actionType": ["effect"],
+			"description": "When your marble is hit by a basic attack, blind the attacker for 1 turn.",
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Whist Minion",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"description": "This card gains 1 charge whenever an item is used. On 3 charges, discharge and gain back one of your used 1-slot items.",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Sturdy",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"description": "You can’t take lethal damage from non-player entities.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Crimson Pendant",
+			"rarity": "C",
+			"slotCost": 2,
+			"sortingType": ["misc", "hp"],
+			"description": "When a player is healed, gain back one of your used 1-slot items.",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Horcrux",
+			"rarity": "L",
+			"slotCost": 2,
+			"sortingType": ["protection", "summon", "misc"],
+			"description": "Summon a node at the start of the game (at any location). Damaging the node will deal the same damage to you and make both of you escape. While the node is on the field, your marble body ignores ALL other damage. Escape actions also move the node. This node can’t deal damage.",
+			"stats": ["Unstackable", "Max 1 Node", "", ""]
+		},
+		{
+			"name": "Overenthusiasm",
+			"rarity": "C",
+			"slotCost": 0,
+			"sortingType": ["misc"],
+			"hp": -1,
+			"mana": -1,
+			"itemSlots": -4,
+			"description": "Decreaces your max HP and mana by 1, but gives you 4 additional item slots.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Backpack",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"itemSlots": -2,
+			"description": "Increases your max number of item slots by 2.",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Valley of Monuments",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["protection", "summon"],
+			"actionType": ["mine"],
+			"description": "Your mines can’t take damage (can still be destroyed using entity-removing effects).",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Blood Pact",
+			"rarity": "L",
+			"slotCost": 1,
+			"sortingType": ["hp"],
+			"description": "Doubles your max HP but you take double damage from other player attacks (does not affect damage from non-player entities).",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Mana Capacitor",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["mana"],
+			"description": "This card gains 1 charge whenever you cast an ability (on finish). On 2 charges, discharge and recover 1 mana.",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Infinite Prosperity",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["mana", "summon"],
+			"description": "This card gains 1 charge whenever you summon an entity. On 6 charges, discharge and gain +1 max mana.",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Infinite Growth",
+			"rarity": "R",
+			"slotCost": 2,
+			"sortingType": ["hp", "summon"],
+			"description": "This card gains 1 charge whenever you summon an entity. On 8 charges, discharge and gain +1 max HP.",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Astral Body",
+			"rarity": "L",
+			"slotCost": 2,
+			"sortingType": ["protection"],
+			"description": "Set your max HP to 1 at start (can’t have any HP-decreasing passives). Ignore ability damage that you take from enemies, but empty mana equal to the damage that you would receive. If you don’t have enough mana, the damage targets your HP.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Mana Blood",
+			"rarity": "L",
+			"slotCost": 2,
+			"sortingType": ["mana", "summon"],
+			"description": "Your missing HP acts as additional mana storage. When healing HP points that are occupied by mana, empty that mana and summon 1 mine per emptied mana.",
+			"stats": ["Unstackable", "P.Range: 2", "", ""]
+		}
 	],
 	
 	
