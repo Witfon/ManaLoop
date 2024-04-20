@@ -56,7 +56,6 @@
 		"sortingType": ["protection"],
 		"actionType": ["basic attack"],
 		"description": "After landing 4 basic attacks on players, gain a shield that will block first external damage that you take (does not charge while you have the shield).",
-		"downgradeText": "Skidadle skidoodle",
 		"stats": ["Unstackable", "", "", ""]
 	},
 	{
