@@ -1,0 +1,135 @@
+{
+	"abilities":
+	[
+	{
+		"name": "Magnetic Blast",
+		"rarity": "L",
+		"slotCost": 3,
+		"manaCost": 4,
+		"sortingType": ["damage"],
+		"actionType": ["projectile"],
+		"description": "Shoot a projectile in a straight line. All entities that come in contact with its effect area will be attached to it. Explodes after hitting a wall with its center, damaging all attached entities.",
+		"stats": ["Range: 4", "A.Damage: 1", "A.Range: 1", ""]
+	},
+	{
+		"name": "360 No-Scope",
+		"rarity": "L",
+		"slotCost": 2,
+		"manaCost": 4,
+		"sortingType": ["damage"],
+		"actionType": ["projectile"],
+		"description": "Shoot a projectile.",
+		"downgradeText": "Takes 1 slot more",
+		"downgradeEffect": {"slots": 1},
+		"stats": ["Range: 4", "Damage: 1", "", ""]
+	},
+	{
+		"name": "Star Storm",
+		"rarity": "L",
+		"slotCost": 2,
+		"manaCost": 4,
+		"sortingType": ["damage"],
+		"actionType": ["aoe"],
+		"description": "Deal damage to all players, including yourself (does not trigger escape).",
+		"downgradeText": "Takes 1 slot more",
+		"downgradeEffect": {"slots": 1},
+		"stats": ["Range: 4", "Damage: 1", "", ""]
+	}
+	],
+	
+	
+	
+	"passives":
+	[
+	{
+		"name": "Berserker",
+		"rarity": "L",
+		"slotCost": 4,
+		"sortingType": ["mana"],
+		"description": "Your abilities cost 0 mana, but after using an ability gain -1 max mana. When you reach 0 max mana, discard this card.",
+		"stats": ["Unstackable", "", "", ""]
+	},
+	{
+		"name": "Blademaster",
+		"rarity": "C",
+		"slotCost": 1,
+		"sortingType": ["protection"],
+		"actionType": ["basic attack"],
+		"description": "After landing 4 basic attacks on players, gain a shield that will block first external damage that you take (does not charge while you have the shield).",
+		"downgradeText": "Skidadle skidoodle",
+		"stats": ["Unstackable", "", "", ""]
+	},
+	{
+		"name": "Glory",
+		"rarity": "C",
+		"slotCost": 1,
+		"sortingType": ["mana"],
+		"description": "Gain +2 max mana when a player dies.",
+		"upgradeText": "+3 max mana on trigger",
+		"stats": ["Stackable", "", "", ""]
+	}
+	],
+	
+	
+	
+	"items":
+	[
+	{
+		"name": "Lasso",
+		"slotCost": 1,
+		"sortingType": ["mobility"],
+		"description": "Drag the target towards your marble.",
+		"stats": ["Range: 4", "Free Use", "Distance: 1", ""]
+	},
+	{
+		"name": "Adrenaline",
+		"slotCost": 1,
+		"sortingType": ["damage"],
+		"actionType": ["basic attack", "verge"],
+		"description": "If your basic attack hits this turn (on any entity), repeat it on a different target ONE more time from hit position. Can verge on entities.",
+		"stats": ["", "Use at Start", "", ""]
+	},
+	{
+		"name": "Growth Script",
+		"slotCost": 1,
+		"sortingType": ["entity"],
+		"actionType": ["mine"],
+		"description": "Dispense all your mana in form of mines.",
+		"stats": ["Range: 2", "Use at Start", "", ""]
+	}
+	],
+	
+	
+	
+	"upgrades":
+	[
+	{
+		"name": "Upgrade - Common",
+		"slotCost": 1,
+		"description": "Upgrades 3 upgradable common cards.",
+		"upgradeLimit": 3,
+		"stats": ["Unstackable", "", "", ""]
+	},
+	{
+		"name": "Upgrade - Rare",
+		"slotCost": 1,
+		"description": "Upgrades 3 upgradable rare cards.",
+		"upgradeLimit": 3,
+		"stats": ["Unstackable", "", "", ""]
+	},
+	{
+		"name": "Upgrade - Legendary",
+		"slotCost": 1,
+		"description": "Upgrades 3 upgradable legendary cards.",
+		"upgradeLimit": 3,
+		"stats": ["Unstackable", "", "", ""]
+	},
+	{
+		"name": "Tinkerer",
+		"slotCost": 0,
+		"itemSlots": 3,
+		"description": "Your upgrade cards can upgrade twice as many cards, but reduces your max item slots by 3",
+		"stats": ["Unstackable", "", "", ""]
+	}
+	]
+}
