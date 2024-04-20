@@ -1284,29 +1284,311 @@
 	
 	"items":
 	[
-	{
-		"name": "Lasso",
-		"slotCost": 1,
-		"sortingType": ["mobility"],
-		"description": "Drag the target towards your marble.",
-		"stats": ["Range: 4", "Free Use", "Distance: 1", ""]
-	},
-	{
-		"name": "Adrenaline",
-		"slotCost": 1,
-		"sortingType": ["damage"],
-		"actionType": ["basic attack", "verge"],
-		"description": "If your basic attack hits this turn (on any entity), repeat it on a different target ONE more time from hit position. Can verge on entities.",
-		"stats": ["", "Use at Start", "", ""]
-	},
-	{
-		"name": "Growth Script",
-		"slotCost": 1,
-		"sortingType": ["summon"],
-		"actionType": ["mine"],
-		"description": "Dispense all your mana in form of mines.",
-		"stats": ["Range: 2", "Use at Start", "", ""]
-	}
+		{
+			"name": "Lasso",
+			"slotCost": 1,
+			"sortingType": ["mobility"],
+			"description": "Drag the target towards your marble.",
+			"stats": ["Range: 4", "Free Use", "Distance: 1", ""]
+		},
+		{
+			"name": "Adrenaline",
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["basic attack", "verge"],
+			"description": "If your basic attack hits this turn (on any entity), repeat it on a different target ONE more time from hit position. Can verge on entities.",
+			"stats": ["", "Use at Start", "", ""]
+		},
+		{
+			"name": "Growth Script",
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"actionType": ["mine"],
+			"description": "Dispense all your mana in form of mines.",
+			"stats": ["Range: 2", "Use at Start", "", ""]
+		},
+		{
+			"name": "Nullification Script",
+			"slotCost": 1,
+			"sortingType": ["misc", "summon"],
+			"description": "Deal 1 damage to all non-player entities in range.",
+			"stats": ["Range: 3", "Free Use", "", ""]
+		},
+		{
+			"name": "Grappling Hook",
+			"slotCost": 1,
+			"sortingType": ["mobility"],
+			"description": "Move in the direction of a wall/barrier that is in range.",
+			"stats": ["Range: 3", "Free Use", "Move Dist: 1", ""]
+		},
+		{
+			"name": "Minewarp",
+			"slotCost": 2,
+			"sortingType": ["mobility", "damage", "summon"],
+			"actionType": ["basic attack", "verge"],
+			"description": "Attack a non-player entity. Then teleport to another non-player entity and perform a basic attack. The used entities will be destroyed. Ignore all damage while preforming this attack. Can verge on entities.",
+			"stats": ["Range: 3", "Free Use", "Move Dist: 1", ""]
+		},
+		{
+			"name": "Vampire Mine",
+			"slotCost": 1,
+			"sortingType": ["summon", "hp"],
+			"actionType": ["mine"],
+			"description": "Summon a special mine. Heal 1 HP when a player is damaged by this mine.",
+			"stats": ["Range: 3", "Use at Start", "Max mines: 9", ""]
+		},
+		{
+			"name": "Ballistic Net",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"actionType": ["effect"],
+			"description": "Stuns another player, making them unable to move during their next turn (they can still generate mana).",
+			"stats": ["Range: 3", "Free Use", "", ""]
+		},
+		{
+			"name": "Health Potion",
+			"slotCost": 2,
+			"sortingType": ["hp"],
+			"description": "Recover 1 HP. Escape after cast.",
+			"stats": ["", "Uses Turn", "", ""]
+		},
+		{
+			"name": "Mana Potion",
+			"slotCost": 1,
+			"sortingType": ["mana"],
+			"description": "Recover 1 mana. You can’t use abilities this turn.",
+			"stats": ["", "Basic Turn", "", ""]
+		},
+		{
+			"name": "Forest's Heart",
+			"slotCost": 2,
+			"sortingType": ["hp"],
+			"actionType": ["aoe", "team"],
+			"description": "Regenerate 1 HP to all players in range.",
+			"stats": ["Range: 3", "Use at Start", "", ""]
+		},
+		{
+			"name": "Brew of The Dead",
+			"slotCost": 2,
+			"sortingType": ["death"],
+			"description": "Sacrifice 1 HP and activate all your on-death effects. Escape after cast. Can’t be used if you have 1 HP left.",
+			"stats": ["Sacrifice: 1", "Free Use", "", ""]
+		},
+		{
+			"name": "Dragon Scale",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"description": "Ignore first damage instance until your next turn.",
+			"stats": ["", "Use at Start", "", ""]
+		},
+		{
+			"name": "Thunder Script",
+			"slotCost": 2,
+			"sortingType": ["damage"],
+			"actionType": ["projectile"],
+			"description": "A projectile that can bounce from one entity once, resetting its range. Escape after cast.",
+			"stats": ["Spread Range: 2", "Uses Turn", "Damage: 1", ""]
+		},
+		{
+			"name": "Tesseract Mine",
+			"slotCost": 1,
+			"sortingType": ["summon", "mobility"],
+			"actionType": ["mine"],
+			"description": "Summon a special mine. When a player takes damage, they switch places with this mine at the end of the turn. If there is already an active tesseract mine on field, destroy it.",
+			"stats": ["P.Range: 2", "Use at Start", "Max Mines: 1", ""]
+		},
+		{
+			"name": "Chaos Script",
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"actionType": ["mine", "aoe"],
+			"description": "All players empty one mana and spawn a mine at their desired location.",
+			"stats": ["Range: 4", "Use at Start", "", ""]
+		},
+		{
+			"name": "Dust Wall",
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"description": "Summon a fragile barrier. This barrier breaks when damaged.",
+			"stats": ["P.Range: 1", "Free Use", "Width: 1", ""]
+		},
+		{
+			"name": "Betrayal",
+			"slotCost": 1,
+			"sortingType": ["damage", "mana"],
+			"actionType": ["team"],
+			"description": "Choose to deal 1-5 damage to an allied player. If the ally dies, recover mana negatively proportionate to the damage dealt (5 damage = 1 mana, 3 damage = 3 mana, 1 damage = 5 mana).",
+			"stats": ["Range: 4", "Free Use", "", ""]
+		},
+		{
+			"name": "Shift",
+			"slotCost": 2,
+			"sortingType": ["mobility"],
+			"actionType": ["team"],
+			"description": "Switch places with another player.",
+			"stats": ["Range: 4", "Use at Start", "", ""]
+		},
+		{
+			"name": "Upgrade Injection",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"description": "Upgrade all your cards and ignore all downgrades. Effect lasts until the start of your next turn. Can use other items after using this card.",
+			"stats": ["", "Free Use", "", ""]
+		},
+		{
+			"name": "Impulse Script",
+			"slotCost": 1,
+			"sortingType": ["mobility"],
+			"description": "Teleport an entity away from your position (can’t teleport into the void).",
+			"stats": ["Range: 3", "Free Use", "Distance: 2", ""]
+		},
+		{
+			"name": "Cursed Touch",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"actionType": ["basic attack"],
+			"description": "Damaging a player with a basic attack this turn will cause them to discard one of their abilities.",
+			"stats": ["", "Use at Start", "", ""]
+		},
+		{
+			"name": "Smiting Touch",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"actionType": ["basic attack"],
+			"description": "Damaging a player with a basic attack this turn will cause them to discard all their items.",
+			"stats": ["", "Use at Start", "", ""]
+		},
+		{
+			"name": "Freezing Touch",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"actionType": ["basic attack"],
+			"description": "Damaging a player with a basic attack this turn will cause them to discard one of their UPGRADE cards.",
+			"stats": ["", "Use at Start", "", ""]
+		},
+		{
+			"name": "Decaying Touch",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"actionType": ["basic attack"],
+			"description": "Damaging a player with a basic attack this turn will cause them to discard one of their passives.",
+			"stats": ["", "Use at Start", "", ""]
+		},
+		{
+			"name": "Disposition",
+			"slotCost": 1,
+			"sortingType": ["mobility", "summon"],
+			"description": "Move a non-player entity.",
+			"stats": ["Range: 4", "Free Use", "Distance: 3", ""]
+		},
+		{
+			"name": "Detonate",
+			"slotCost": 1,
+			"sortingType": ["damage", "summon"],
+			"actionType": ["mine", "aoe"],
+			"description": "Pick a mine. Destroy the mine and deal 1 damage to everything around it.",
+			"stats": ["Range: 3", "Uses Turn", "S.Range: 2", ""]
+		},
+		{
+			"name": "Force Field",
+			"slotCost": 1,
+			"sortingType": ["summon", "misc"],
+			"actionType": ["mine", "aoe"],
+			"description": "Summon a special mine that will stop any player that moves into effect range (A.Range: 1) (will not work if the player is already in the affected area).",
+			"stats": ["P.Range: 3", "Use at Start", "Max Mines: 2", ""]
+		},
+		{
+			"name": "Black Hole",
+			"slotCost": 1,
+			"sortingType": ["mobility", "summon"],
+			"actionType": ["aoe"],
+			"description": "Drop all on-field non-player entities on your marble. These entities deal/take no damage until the last one stops.",
+			"stats": ["", "Use at Start", "", ""]
+		},
+		{
+			"name": "Mimic",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"description": "Use an ability that belongs to another player (upgrades it and copies cost).",
+			"stats": ["", "Uses Turn", "", ""]
+		},
+		{
+			"name": "Duplicate",
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"description": "Summon a copy of any non-player entity that is in range. Can’t exceed summon limit of that entity.",
+			"stats": ["Range: 4", "Free Use", "", ""]
+		},
+		{
+			"name": "Demonic Script",
+			"slotCost": 1,
+			"sortingType": ["mana", "misc"],
+			"description": "Recover 2 mana. The next ability that you use will cost health instead of mana. You need to have more available health than the ability cost.",
+			"stats": ["", "Use at Start", "", ""]
+		},
+		{
+			"name": "Upgrade Block",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"actionType": ["effect"],
+			"description": "Disable another player’s upgrade card until the start of your next turn while activating all their downgrades. Can use other items after using this card.",
+			"stats": ["Range: 4", "Free Use", "", ""]
+		},
+		{
+			"name": "Potency Spike",
+			"slotCost": 1,
+			"sortingType": ["damage", "summon"],
+			"actionType": ["mine"],
+			"description": "Enrich a mine, doubling its contact damage.",
+			"stats": ["Range: 3", "Use at Start", "", ""]
+		},
+		{
+			"name": "Blight",
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"actionType": ["effect"],
+			"description": "Blind a player until the start of your next turn.",
+			"stats": ["Range: 4", "Free Use", "", ""]
+		},
+		{
+			"name": "Pocket Star",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"actionType": ["effect"],
+			"description": "Remove all temporary negative effects from you (blind, ichor, venom etc.).",
+			"stats": ["", "Free Use", "", ""]
+		},
+		{
+			"name": "Pocket Clover",
+			"slotCost": 1,
+			"sortingType": ["misc"],
+			"actionType": ["basic attack"],
+			"description": "If you missed your basic attack this turn, redo it once.",
+			"stats": ["", "Free Use", "", ""]
+		},
+		{
+			"name": "Pocket Mines",
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"actionType": ["mine"],
+			"description": "Summon 2 mines.",
+			"stats": ["P.Range: 1", "Basic Turn", "Max Mines: 4", ""]
+		},
+		{
+			"name": "Impulse Jelly",
+			"slotCost": 1,
+			"sortingType": ["mobility", "summon"],
+			"actionType": ["mine"],
+			"description": "Summon a special mine (P.Range: 4). At the start of your next turn, all in-range entities are moved towards that mine. Destroy the mine afterwards.",
+			"stats": ["A.Range: 3", "Free Use", "Distance: 2", ""]
+		},
+		{
+			"name": "Mana Injection",
+			"slotCost": 2,
+			"sortingType": ["mana"],
+			"description": "Instantly recover 1 mana.",
+			"stats": ["", "Free Use", "", ""]
+		}
 	],
 	
 	
