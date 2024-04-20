@@ -1,40 +1,697 @@
 {
 	"abilities":
 	[
-	{
-		"name": "Magnetic Blast",
-		"rarity": "L",
-		"slotCost": 3,
-		"manaCost": 4,
-		"sortingType": ["damage"],
-		"actionType": ["projectile"],
-		"description": "Shoot a projectile in a straight line. All entities that come in contact with its effect area will be attached to it. Explodes after hitting a wall with its center, damaging all attached entities.",
-		"stats": ["Range: 4", "A.Damage: 1", "A.Range: 1", ""]
-	},
-	{
-		"name": "360 No-Scope",
-		"rarity": "L",
-		"slotCost": 2,
-		"manaCost": 4,
-		"sortingType": ["damage"],
-		"actionType": ["projectile"],
-		"description": "Shoot a projectile.",
-		"downgradeText": "Takes 1 slot more",
-		"downgradeEffect": {"slots": 1},
-		"stats": ["Range: 4", "Damage: 1", "", ""]
-	},
-	{
-		"name": "Star Storm",
-		"rarity": "L",
-		"slotCost": 2,
-		"manaCost": 4,
-		"sortingType": ["damage"],
-		"actionType": ["aoe"],
-		"description": "Deal damage to all players, including yourself (does not trigger escape).",
-		"downgradeText": "Takes 1 slot more",
-		"downgradeEffect": {"slots": 1},
-		"stats": ["Range: 4", "Damage: 1", "", ""]
-	}
+		{
+			"name": "Magnetic Blast",
+			"rarity": "L",
+			"slotCost": 3,
+			"manaCost": 4,
+			"sortingType": ["damage"],
+			"actionType": ["projectile"],
+			"description": "Shoot a projectile in a straight line. All entities that come in contact with its effect area will be attached to it. Explodes after hitting a wall with its center, damaging all attached entities.",
+			"stats": ["Range: 4", "A.Damage: 1", "A.Range: 1", ""]
+		},
+		{
+			"name": "360 No-Scope",
+			"rarity": "L",
+			"slotCost": 2,
+			"manaCost": 4,
+			"sortingType": ["damage"],
+			"actionType": ["projectile"],
+			"description": "Shoot a projectile.",
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Star Storm",
+			"rarity": "L",
+			"slotCost": 2,
+			"manaCost": 4,
+			"sortingType": ["damage"],
+			"actionType": ["aoe"],
+			"description": "Deal damage to all players, including yourself (does not trigger escape).",
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Draconic Wings",
+			"rarity": "L",
+			"slotCost": 2,
+			"manaCost": 4,
+			"sortingType": ["damage", "protection"],
+			"actionType": ["slash", "basic attack"],
+			"description": "Fly to the target and slash it. Use a basic attack after 3 seconds. Ignore all damage while preforming this ability.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 3", "Damage: 1+1", "", ""]
+		},
+		{
+			"name": "Pyromaster",
+			"rarity": "L",
+			"slotCost": 1,
+			"manaCost": 2,
+			"sortingType": ["summon"],
+			"actionType": ["mine"],
+			"description": "Summon 3 mines. Use a basic attack/ability after cast.",
+			"upgradeText": "Costs 1 less",
+			"upgradeEffect": {"manaCost": 1},
+			"stats": ["P.Range: 4", "Max Mines: 9", "", ""]
+		},
+		{
+			"name": "Arise",
+			"rarity": "L",
+			"slotCost": 2,
+			"manaCost": 3,
+			"sortingType": ["hp"],
+			"actionType": ["team"],
+			"description": "Sacrifice 1 HP and bring back 1 player from the dead with 1 HP.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Sacrifice: 1", "", "", ""]
+		},
+		{
+			"name": "Aura Pulse",
+			"rarity": "R",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage", "hp", "mana"],
+			"actionType": ["aoe"],
+			"description": "Damage all entities around you. If you have damaged at least 2 entities, recover 1 HP and 2 mana.",
+			"stats": ["A.Range: 2", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Snipe",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["projectile"],
+			"description": "Shoot a projectile at your target. This damage can not be blocked.",
+			"stats": ["Range: 2", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Minedrop",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"actionType": ["mine"],
+			"description": "Summon 1 mine. Use a basic attack/ability after cast.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["P.Range: 1", "Max Mines: 6", "No Cooldown", ""]
+		},
+		{
+			"name": "Blaze Wheel",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"description": "Drag your marble back from your intended attack direction (Range: 2) and then attack.",
+			"stats": ["Range: 4", "Damage: 2", "No Cooldown", ""]
+		},
+		{
+			"name": "Thunder Strike",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["drop"],
+			"description": "Fly to the target and drop your marble on it.",
+			"stats": ["Range: 3", "Damage: 1", "Height: 3", ""]
+		},
+		{
+			"name": "Gust",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["mobility"],
+			"description": "Move all entities away from your marble, but no further than Range 3 from the epicenter (can be used before escaping).",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 3", "", "", ""]
+		},
+		{
+			"name": "Entomb",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["summon", "damage"],
+			"description": "Entomb the target in a static barrier. Moving horizontally into the barrier causes it to explode, dealing 1 damage to whoever touched it (applies to entombed target too).",
+			"stats": ["Range: 1", "Damage: 2", "", ""]
+		},
+		{
+			"name": "Bouncing Doom",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 2,
+			"sortingType": ["damage"],
+			"actionType": ["projectile"],
+			"description": "Shoot a projectile. If it hits an entity, it damages it and jumps to another target if in range (can’t hit same targets twice).",
+			"stats": ["Range: 2", "Damage: 1", "Spread Range: 2", ""]
+		},
+		{
+			"name": "Heal",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["hp"],
+			"actionType": ["team"],
+			"description": "Restore 1 HP to any entity. Escape after cast.",
+			"upgradeText": "Range: 4",
+			"stats": ["Range: 3", "Heal: 1", "", ""]
+		},
+		{
+			"name": "Shroom",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"description": "Summon an indestructible node. Players that hit the node will be stopped in place, allowing them to reset the range of their current attack. Use a basic attack after cast.",
+			"stats": ["Range: 2", "Max Shrooms: 5", "", ""]
+		},
+		{
+			"name": "Explosive Shot",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"description": "An attack that deals splash damage every time it hits a wall or an entity. Deals no contact damage.",
+			"stats": ["Range: 4", "S.Damage: 1", "S.Range: 1", ""]
+		},
+		{
+			"name": "Meteor Strike",
+			"rarity": "R",
+			"manaCost": 3,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["aoe"],
+			"description": "Lift your marble in the air at your position and toss it at your target, creating an explosion at the first ground contact. Impact damage is doubled.",
+			"upgradeText": "Ignore all damage while using this ability",
+			"stats": ["Range: 4", "S.Damage: 1", "S.Range: 1", "Height: 2"]
+		},
+		{
+			"name": "Bomb Toss",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 2,
+			"sortingType": ["damage"],
+			"actionType": ["aoe"],
+			"description": "Create an explosion at chosen location. Escape after cast.",
+			"stats": ["Range: 2", "Damage: 1", "S.Range: 1", ""]
+		},
+		{
+			"name": "Thunder Blast",
+			"rarity": "R",
+			"manaCost": 3,
+			"slotCost": 2,
+			"sortingType": ["damage"],
+			"actionType": ["drop"],
+			"description": "Fly to the target and drop your marble on it.",
+			"stats": ["Range: 3", "Damage: 2", "Height: 3", ""]
+		},
+		{
+			"name": "Leeching Strike",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage", "hp"],
+			"description": "Attack any entity. If you damage it, recover 1 hp to yourself.",
+			"stats": ["Range: 4", "Damage: 1", "Heal: 1", ""]
+		},
+		{
+			"name": "Blind Shot",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"description": "Attack an enemy with your eyes closed. Escape after cast.",
+			"stats": ["Range: 4", "Damage: 2", "", ""]
+		},
+		{
+			"name": "Barrier",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["summon"],
+			"description": "Summon a barrier and use a basic attack. Consecutive uses will move the barrier (if in range) and give you an extra turn.",
+			"upgradeText": "Width: 2",
+			"stats": ["Range: 3", "Max 1 Barrier", "Width: 1", "No Cooldown"]
+		},
+		{
+			"name": "Mine Launcher",
+			"rarity": "R",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["damage", "summon"],
+			"actionType": ["mine"],
+			"description": "Pull up to 2 mines to your position and attack with them. If there are less than 2 mines nearby, you can summon mines for the attack at your position until you have 2 mines. Spend 1 mana for each mine summoned. Escape after cast.",
+			"stats": ["Pull Range: 2", "Damage: 1+1", "Max Mines: 6", ""]
+		},
+		{
+			"name": "Bash",
+			"rarity": "C",
+			"manaCost": 4,
+			"slotCost": 2,
+			"sortingType": ["damage"],
+			"description": "Attack an enemy. Can only deal damage to targets within range.",
+			"stats": ["Range: 3", "Damage: 3", "", ""]
+		},
+		{
+			"name": "Tornado",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["spin"],
+			"description": "Spin your marble at the target. This attack will damage entities until your marble stops.",
+			"stats": ["Range: 4", "Damage: 2", "", ""]
+		},
+		{
+			"name": "Possession",
+			"rarity": "R",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage", "misc"],
+			"description": "Attack with another entity. This attack has the damage and effect of the entity.",
+			"upgradeText": "Range: 4",
+			"stats": ["Range: 3", "", "", ""]
+		},
+		{
+			"name": "Teleport",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["mobility"],
+			"actionType": ["team"],
+			"description": "Switch places with another player. Use a basic attack or ability after cast.",
+			"upgradeText": "Range: 4",
+			"stats": ["Range: 3", "", "", ""]
+		},
+		{
+			"name": "Harvest",
+			"rarity": "R",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["mana", "summon"],
+			"actionType": ["verge"],
+			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a non-player entity (can verge). If you hit, repeat this action (until you miss). Recover 1 mana for each destroyed enty.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "Damage: 1", "No Cooldown", ""]
+		},
+		{
+			"name": "Convert",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["mana"],
+			"description": "Sacrifice 1 HP and restore 3 mana to yourself. Escape after cast.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["", "", "", ""]
+		},
+		{
+			"name": "Blink",
+			"rarity": "R",
+			"manaCost": 1,
+			"slotCost": 2,
+			"sortingType": ["mobility"],
+			"description": "Teleport forward. Use a basic attack/ability after cast.",
+			"stats": ["Distance: 2", "", "", ""]
+		},
+		{
+			"name": "Wing Attack",
+			"rarity": "R",
+			"manaCost": 3,
+			"slotCost": 3,
+			"sortingType": ["damage"],
+			"actionType": ["slash"],
+			"description": "Fly to the target and slash.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 3", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Clone Strike",
+			"rarity": "R",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["verge"],
+			"description": "Attack a target. If you hit, let the target escape, return to your previous position and repeat the process (until you miss). These attacks can verge.",
+			"stats": ["Range: 4", "Damage: 1-4", "Max Hits: 4", ""]
+		},
+		{
+			"name": "Multistrike",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["verge"],
+			"description": "Attack a target. If you hit, repeat the attack on another target from hit position (can’t be used on targets that already got damaged this turn). These attacks can verge.",
+			"stats": ["Range: 4", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Death Ray",
+			"rarity": "R",
+			"manaCost": 5,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["projectile"],
+			"description": "Shoot a penetrating projectile (can damage multiple entities but can’t penetrate walls).",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Sky Blast",
+			"rarity": "R",
+			"manaCost": 3,
+			"slotCost": 2,
+			"sortingType": ["damage"],
+			"actionType": ["drop", "aoe"],
+			"description": "On first turn, your marble flies up into the sky where it can’t be hit by attacks. On next turn, drop on the target dealing spash damage. If you miss, the the splash damage cancels and you take 1 damage instead. Can be used instead of escape. Uses 2 turns in total.",
+			"stats": ["Range: 4", "S.Damage: 1", "Height: 3", "S.Range: 2"]
+		},
+		{
+			"name": "Star Beam",
+			"rarity": "L",
+			"manaCost": 2,
+			"slotCost": 2,
+			"sortingType": ["damage", "summon"],
+			"actionType": ["projectile"],
+			"description": "Shoot a non-damaging projectile that resets its range after hitting an entity, spreading further. When the projectile draws a closed loop, it detonates, damaging all players inside of the drawn polygons.",
+			"stats": ["Spread Range: 2", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Ricoshette",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 2,
+			"sortingType": ["damage"],
+			"actionType": ["projectile"],
+			"description": "A hopping projectile that resets its range after hitting any wall/barrier. Can hit multiple walls/barriers but can’t penetrate them.",
+			"stats": ["Range: 2", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Scorch",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["damage", "misc"],
+			"actionType": ["slash"],
+			"description": "Slash a target and empty all their mana.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 1", "Damage: 2", "No Cooldown", ""]
+		},
+		{
+			"name": "Quickshot",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage", "protection"],
+			"actionType": ["verge", "basic attack"],
+			"description": "Use a basic attack and return to your starting position after your marble stops (can verge). You are immune to damage while using this ability.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Nether Rift",
+			"rarity": "R",
+			"manaCost": 3,
+			"slotCost": 2,
+			"sortingType": ["misc", "summon"],
+			"description": "Destroy all non-player entities.",
+			"upgradeText": "Costs 1 less and takes 1 slot less",
+			"upgradeEffect": {"slots": 1, "manaCost": 1},
+			"stats": ["Range: 4", "", "", ""]
+		},
+		{
+			"name": "Tectonic Wall",
+			"rarity": "R",
+			"manaCost": 2,
+			"slotCost": 2,
+			"sortingType": ["summon"],
+			"description": "Create a barrier from one wall to another and summon 2 nodes on each side of the barrier. The barrier destroys only when both nodes get knocked out. Must be used close to a wall.",
+			"stats": ["Range: 2", "Width: 4", "Max 1 Barrier", ""]
+		},
+		{
+			"name": "Quadraphase",
+			"rarity": "L",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage", "mobility"],
+			"actionType": ["verge", "projectile"],
+			"description": "Mult-step attack. 1: Attack a target without triggering escape (can verge). 2: Launch a R2 projectile after 3 seconds. 3: Teleport the first hit target to your starting location. 4: Teleport to a R2 location.",
+			"stats": ["Range: 4, 2, x, 2", "Damage: 1+1", "", ""]
+		},
+		{
+			"name": "Mana Transfer",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["mana"],
+			"actionType": ["team"],
+			"description": "Transfer up to your entire mana pool to another player. Escape after cast.",
+			"stats": ["Range: 4", "", "", ""]
+		},
+		{
+			"name": "Geomancer",
+			"rarity": "L",
+			"manaCost": 4,
+			"slotCost": 2,
+			"sortingType": ["damage", "summon"],
+			"actionType": ["mine"],
+			"description": "Summon 4 mines around your marble. Next turn, if you haven't taken any damage from the previous turn, attack with all 4 mines and escape with your marble.",
+			"stats": ["P.Range: 1", "Damage: 1-4", "", ""]
+		},
+		{
+			"name": "Hurricane",
+			"rarity": "R",
+			"manaCost": 3,
+			"slotCost": 1,
+			"sortingType": ["damage", "misc"],
+			"actionType": ["spin", "aoe"],
+			"description": "Spin your marble and collect all entities around it. After 10 seconds, drop all collected entities around your marble, damaging them. Damaged players empty all their mana.",
+			"stats": ["A.Range: 1", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Heartbreaker",
+			"rarity": "R",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage", "hp"],
+			"actionType": ["verge"],
+			"description": "Attack a player 3 times without changing your position, with 3 seconds cooldown after each attack (these attacks don't deal any damage, does not trigger escape, can verge once). If you hit 3 times, damage the target, empty 1 of their mana, and recover 1 HP.",
+			"stats": ["Range: 4", "Damage: 2", "Heal: 1", ""]
+		},
+		{
+			"name": "Time Leap",
+			"rarity": "R",
+			"manaCost": 1,
+			"slotCost": 2,
+			"sortingType": ["mobility"],
+			"description": "Summon a point at your current position. Consecutive uses will teleport you to the point. Use a basic attac/ability after cast.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Tp.Range: 4", "", "", ""]
+		},
+		{
+			"name": "Master Strike",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"description": "An attack that deals 1 additional damage for each time your marble bounces off a wall or a non player entity. Can verge.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Tp.Range: 4", "Damage: 1+", "", ""]
+		},
+		{
+			"name": "Flamethrower",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["aoe"],
+			"description": "Damage everything in a 90º angle originated from your marble (the area extends in a cone shape). Damaged players empty 1 mana.",
+			"upgradeText": "Costs 1 less",
+			"upgradeEffect": {"manaCost": 1},
+			"stats": ["Range: 2", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Banana Time",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["hp", "summon"],
+			"actionType": ["mine"],
+			"description": "Summon 2 healing mines (min distance between mines: 1). When a player destroys this mine, they regenerate 1 HP. Escape after cast (can’t heal from these mines during this escape).",
+			"upgradeText": "Costs 1 less",
+			"upgradeEffect": {"manaCost": 1},
+			"stats": ["P.Range: 4", "Max Bananas: 4", "", ""]
+		},
+		{
+			"name": "Toxin Cloud",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["misc", "damage"],
+			"actionType": ["aoe", "effect"],
+			"description": "Create an explosion (deals no damage). All players in affected area will take 1 more damage from the next damage source. Effect can’t stack.",
+			"stats": ["Range: 3", "S.Range: 2", "", ""]
+		},
+		{
+			"name": "Slam",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"description": "Lift your marble in the air at your position and toss it at your target. Can only damage players that are in range.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 2", "Damage: 2", "", ""]
+		},
+		{
+			"name": "Shockwave",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"actionType": ["projectile", "aoe"],
+			"description": "Shoot a wide penetrating projectile that bashes away all entities that it hits. Affected entities gain +1 contact damage until the end of your turn (they only take damage after they stop).",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 2", "Damage: 1+", "Width: 2", ""]
+		},
+		{
+			"name": "Poison Sting",
+			"rarity": "C",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage", "misc"],
+			"actionType": ["effect"],
+			"description": "Attack the target. The target will take 1 extra damage your next turn. The second damage will not trigger escape and on-death effects. You take x2 damage from anything while performing this ability.",
+			"stats": ["Range: 4", "Damage: 1+1", "", ""]
+		},
+		{
+			"name": "Berserk Strike",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"description": "Attack an enemy. If you miss, take 1 damage.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "Damage: 2", "", ""]
+		},
+		{
+			"name": "Polar Shift",
+			"rarity": "R",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["mobility"],
+			"description": "All entities are moved to the closest wall or barrier.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "", "", ""]
+		},
+		{
+			"name": "Portal",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["mobility", "summon"],
+			"description": "Summon a point and give yourself an extra turn. When a second point is summoned, they get linked. Hitting one of them will teleport you to the other one, from which you can reset your attack range. Only players with this card can use the portals. You can only have one portal pair.",
+			"stats": ["P.Range: 4", "", "", ""]
+		},
+		{
+			"name": "Death's Touch",
+			"rarity": "R",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["death", "damage"],
+			"actionType": ["team"],
+			"description": "Attack a player. If you damage them, activate all their on-death effects. If you miss, take 1 damage.",
+			"stats": ["Range: 4", "", "", ""]
+		},
+		{
+			"name": "Fairy Sawblade",
+			"rarity": "L",
+			"manaCost": 1,
+			"slotCost": 2,
+			"sortingType": ["damage", "misc"],
+			"actionType": ["aoe"],
+			"description": "Attack a player. If you damage them, activate all their on-death effects. If you miss, take 1 damage.",
+			"stats": ["Range: 2", "Damage: 1+", "A.Range: 1", ""]
+		},
+		{
+			"name": "Dark Wind",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["misc", "damage"],
+			"actionType": ["aoe"],
+			"description": "Blind all other players and double the damage that they receive until your next turn. Escape after use.",
+			"stats": ["Range: 4", "", "", ""]
+		},
+		{
+			"name": "Rearrange",
+			"rarity": "C",
+			"manaCost": 0,
+			"slotCost": 1,
+			"sortingType": ["mobility", "summon"],
+			"description": "Move all non-player entities. Escape after use.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "", "", ""]
+		},
+		{
+			"name": "Aura Discharge",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["damage", "protection"],
+			"description": "Charge up for 1 turn. On your next turn, damage all players around your marble. You can’t take damage while charging this ability. Escape after finishing this ability.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 3", "Damage: 1", "", ""]
+		},
+		{
+			"name": "Enrich",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["misc", "damage", "summon"],
+			"description": "Enrich ALL non-player entities in an area (mines, barriers, etc.), giving them +1 contact damage. Use a basic attack after cast.",
+			"upgradeText": "Costs 1 less",
+			"upgradeEffect": {"manaCost": 1},
+			"stats": ["Range: 2", "A.Range: 1", "", ""]
+		},
+		{
+			"name": "Bounce Wall",
+			"rarity": "R",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["summon", "misc"],
+			"description": "Summon a special barrier and escape. When hit by a projectile, the barrier resets the projectile's range, allowing the caster to shoot it again from impact point (can not penetrate the barrier). Consecutive uses will move the barrier (if in range) and give you an extra turn.",
+			"stats": ["Range: 3", "Width: 1", "", ""]
+		},
+		{
+			"name": "Warp Mine",
+			"rarity": "C",
+			"manaCost": 1,
+			"slotCost": 1,
+			"sortingType": ["mobility", "summon"],
+			"actionType": ["mine"],
+			"description": "Summon a special mine and give yourself an extra turn. Consecutive uses will switch your position with the mine, after which you can use a basic attack/ability (until it is destroyed).",
+			"stats": ["P.Range: 1", "Max Mines: 1", "", ""]
+		}
 	],
 	
 	
@@ -91,7 +748,7 @@
 	{
 		"name": "Growth Script",
 		"slotCost": 1,
-		"sortingType": ["entity"],
+		"sortingType": ["summon"],
 		"actionType": ["mine"],
 		"description": "Dispense all your mana in form of mines.",
 		"stats": ["Range: 2", "Use at Start", "", ""]
@@ -103,23 +760,9 @@
 	"upgrades":
 	[
 	{
-		"name": "Upgrade - Common",
+		"name": "Universal Upgrade",
 		"slotCost": 1,
-		"description": "Upgrades 3 upgradable common cards.",
-		"upgradeLimit": 3,
-		"stats": ["Unstackable", "", "", ""]
-	},
-	{
-		"name": "Upgrade - Rare",
-		"slotCost": 1,
-		"description": "Upgrades 3 upgradable rare cards.",
-		"upgradeLimit": 3,
-		"stats": ["Unstackable", "", "", ""]
-	},
-	{
-		"name": "Upgrade - Legendary",
-		"slotCost": 1,
-		"description": "Upgrades 3 upgradable legendary cards.",
+		"description": "Upgrades 3 upgradable cards.",
 		"upgradeLimit": 3,
 		"stats": ["Unstackable", "", "", ""]
 	},
