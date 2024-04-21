@@ -1432,7 +1432,7 @@
 			"name": "Upgrade Injection",
 			"slotCost": 2,
 			"sortingType": ["misc"],
-			"description": "Upgrade all your cards and ignore all downgrades. Effect lasts until the start of your next turn. Can use other items after using this card.",
+			"description": "Upgrade all your cards and ignore all downgrades. Effect lasts until you take damage (self-damage included).",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
