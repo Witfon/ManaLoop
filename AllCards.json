@@ -621,7 +621,7 @@
 			"slotCost": 1,
 			"sortingType": ["death", "damage"],
 			"actionType": ["team"],
-			"description": "Attack a player. If you damage them, activate all their on-death effects. If you miss, take 1 damage.",
+			"description": "Attack a player. If you damage them, activate all their on-death effects.",
 			"stats": ["Range: 4", "", "", ""]
 		},
 		{
@@ -631,7 +631,7 @@
 			"slotCost": 2,
 			"sortingType": ["damage", "misc"],
 			"actionType": ["aoe"],
-			"description": "Attack a player. If you damage them, activate all their on-death effects. If you miss, take 1 damage.",
+			"description": "Damage everything in a wide line. This damage can’t be blocked by any means. If a player dies from this ability, they can not be resurrected this game and this ability gains +1 damage.",
 			"stats": ["Range: 2", "Damage: 1+", "A.Range: 1", ""]
 		},
 		{
