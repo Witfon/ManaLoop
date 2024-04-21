@@ -1119,7 +1119,7 @@
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
-			"name": "Scavenger",
+			"name": "Ethereal Guard",
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["protection"],
