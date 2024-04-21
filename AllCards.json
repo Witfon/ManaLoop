@@ -1600,7 +1600,7 @@
 		"slotCost": 1,
 		"description": "Upgrades 3 upgradable cards.",
 		"upgradeLimit": 3,
-		"stats": ["Unstackable", "", "", ""]
+		"stats": ["Max 1 per deck", "", "", ""]
 	},
 	{
 		"name": "Tinkerer",
