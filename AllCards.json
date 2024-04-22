@@ -55,12 +55,10 @@
 			"name": "Pyromaster",
 			"rarity": "L",
 			"slotCost": 1,
-			"manaCost": 2,
+			"manaCost": 1,
 			"sortingType": ["summon"],
 			"actionType": ["mine"],
-			"description": "Summon 3 mines. Use a basic attack/ability after cast.",
-			"upgradeText": "Costs 1 less",
-			"upgradeEffect": {"manaCost": 1},
+			"description": "Summon 3 mines. Use an ability/basic attack after cast.",
 			"stats": ["P.Range: 4", "Max Mines: 9", "", ""]
 		},
 		{
@@ -102,7 +100,7 @@
 			"slotCost": 1,
 			"sortingType": ["summon"],
 			"actionType": ["mine"],
-			"description": "Summon 1 mine. Use a basic attack/ability after cast.",
+			"description": "Summon 1 mine. Use a different ability/basic attack after cast.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["P.Range: 1", "Max Mines: 6", "No Cooldown", ""]
@@ -203,7 +201,7 @@
 			"slotCost": 2,
 			"sortingType": ["damage"],
 			"actionType": ["aoe"],
-			"description": "Create an explosion at chosen location. Escape after cast.",
+			"description": "Create an explosion at chosen location. Can escape after cast.",
 			"stats": ["Range: 2", "Damage: 1", "S.Range: 1", ""]
 		},
 		{
@@ -219,7 +217,7 @@
 		{
 			"name": "Leeching Strike",
 			"rarity": "C",
-			"manaCost": 1,
+			"manaCost": 2,
 			"slotCost": 1,
 			"sortingType": ["damage", "hp"],
 			"description": "Attack any entity. If you damage it, recover 1 hp to yourself.",
@@ -231,7 +229,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "Attack an enemy with your eyes closed. Escape after cast.",
+			"description": "Attack an enemy with your eyes closed. Can escape after cast.",
 			"stats": ["Range: 4", "Damage: 2", "", ""]
 		},
 		{
@@ -251,7 +249,7 @@
 			"slotCost": 1,
 			"sortingType": ["damage", "summon"],
 			"actionType": ["mine"],
-			"description": "Pull up to 2 mines to your position and attack with them. If there are less than 2 mines nearby, you can summon mines for the attack at your position until you have 2 mines. Spend 1 mana for each mine summoned. Escape after cast.",
+			"description": "Pull up to 2 mines to your position and attack with them. If there are less than 2 mines nearby, you can summon mines for the attack at your position until you have 2 mines. Spend 1 mana for each mine summoned. Can escape after cast.",
 			"stats": ["Pull Range: 2", "Damage: 1+1", "Max Mines: 6", ""]
 		},
 		{
@@ -312,7 +310,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["mana"],
-			"description": "Sacrifice 1 HP and restore 3 mana to yourself. Escape after cast.",
+			"description": "Sacrifice 1 HP and restore 3 mana to yourself. Can escape after cast.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["", "", "", ""]
@@ -323,7 +321,7 @@
 			"manaCost": 1,
 			"slotCost": 2,
 			"sortingType": ["mobility"],
-			"description": "Teleport forward. Use a basic attack/ability after cast.",
+			"description": "Teleport forward. Use an ability/basic attack after cast.",
 			"stats": ["Distance: 2", "", "", ""]
 		},
 		{
@@ -461,7 +459,7 @@
 			"slotCost": 1,
 			"sortingType": ["mana"],
 			"actionType": ["team"],
-			"description": "Transfer up to your entire mana pool to another player. Escape after cast.",
+			"description": "Transfer up to your entire mana pool to another player. Use a basic attack after cast.",
 			"stats": ["Range: 4", "", "", ""]
 		},
 		{
@@ -500,10 +498,10 @@
 			"manaCost": 1,
 			"slotCost": 2,
 			"sortingType": ["mobility"],
-			"description": "Summon a point at your current position. Consecutive uses will teleport you to the point. Use a basic attac/ability after cast.",
+			"description": "Summon a point near your current position. Consecutive uses will teleport you to the point. Use an ability/basic attack after cast.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Tp.Range: 4", "", "", ""]
+			"stats": ["Tp.Range: 4", "Summon Range: 2", "", ""]
 		},
 		{
 			"name": "Master Strike",
@@ -535,7 +533,7 @@
 			"slotCost": 1,
 			"sortingType": ["hp", "summon"],
 			"actionType": ["mine"],
-			"description": "Summon 2 healing mines (min distance between mines: 1). When a player destroys this mine, they regenerate 1 HP. Escape after cast (can’t heal from these mines during this escape).",
+			"description": "Summon 2 healing mines (min distance between mines: 1). When a player destroys this mine, they regenerate 1 HP. Escape after cast (can’t heal from these mines until end of this turn).",
 			"upgradeText": "Costs 1 less",
 			"upgradeEffect": {"manaCost": 1},
 			"stats": ["P.Range: 4", "Max Bananas: 4", "", ""]
@@ -547,7 +545,7 @@
 			"slotCost": 1,
 			"sortingType": ["misc", "damage"],
 			"actionType": ["aoe", "effect"],
-			"description": "Create an explosion (deals no damage). All players in affected area will take 1 more damage from the next damage source. Effect can’t stack.",
+			"description": "Create an explosion (deals no damage). All affected players will take 1 more damage from the next damage source. All affected special mines and nodes are converted into regular mines.",
 			"stats": ["Range: 3", "S.Range: 2", "", ""]
 		},
 		{
@@ -611,7 +609,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Summon a point and give yourself an extra turn. When a second point is summoned, they get linked. Hitting one of them will teleport you to the other one, from which you can reset your attack range. Only players with this card can use the portals. You can only have one portal pair.",
+			"description": "Summon a point and give yourself an extra action. When a second point is summoned, they get linked. Hitting one of them will teleport you to the other one, from which you can reset your attack range. Only players with this card can use the portals. You can only have one portal pair.",
 			"stats": ["P.Range: 4", "", "", ""]
 		},
 		{
@@ -641,7 +639,7 @@
 			"slotCost": 1,
 			"sortingType": ["misc", "damage"],
 			"actionType": ["aoe"],
-			"description": "Blind all other players and double the damage that they receive until your next turn. Escape after use.",
+			"description": "Blind all other players and double the damage that they receive until your next turn. Can escape after cast.",
 			"stats": ["Range: 4", "", "", ""]
 		},
 		{
@@ -650,7 +648,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Move all non-player entities. Escape after use.",
+			"description": "Move all non-player entities. Can escape after cast.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 4", "", "", ""]
@@ -661,7 +659,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["damage", "protection"],
-			"description": "Charge up for 1 turn. On your next turn, damage all players around your marble. You can’t take damage while charging this ability. Escape after finishing this ability.",
+			"description": "Charge up for 1 turn. On your next turn, damage all players around your marble. You can’t take damage while charging this ability. Use a basic attack after finishing this ability.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 3", "Damage: 1", "", ""]
@@ -693,7 +691,7 @@
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
 			"actionType": ["mine"],
-			"description": "Summon a special mine and give yourself an extra turn. Consecutive uses will switch your position with the mine, after which you can use a basic attack/ability (until it is destroyed).",
+			"description": "Summon a special mine and give yourself an extra action. Consecutive uses will switch your position with the mine, after which you can use an ability/basic attack (until it is destroyed).",
 			"stats": ["P.Range: 1", "Max Mines: 1", "", ""]
 		}
 	],
@@ -790,11 +788,9 @@
 		{
 			"name": "Mana Barrier",
 			"rarity": "L",
-			"slotCost": 3,
+			"slotCost": 2,
 			"sortingType": ["protection"],
 			"description": "Whenever you takes damage, reduce your max mana equal to damage taken instead of taking HP damage (your max mana acts like adittional HP).",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -857,7 +853,7 @@
 			"slotCost": 2,
 			"sortingType": ["mana"],
 			"actionType": ["basic attack"],
-			"description": "Restore 1 mana to yourself after landing a basic attack on a player, but enemies don’t have to escape after them (will still trigger mana recovery).",
+			"description": "Restore 1 mana to yourself after landing a basic attack on a player, but enemies don’t have to escape after your basic attacks (will still trigger mana recovery).",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -866,7 +862,7 @@
 			"slotCost": 2,
 			"sortingType": ["hp"],
 			"actionType": ["basic attack"],
-			"description": "Recover 1 HP to yourself after landing a basic attack on a player. Your basic attacks deal no damage (will still trigger escape and mana recovery).",
+			"description": "Recover 1 HP to yourself after landing a basic attack on a player. Your basic attacks deal no damage (will still trigger escape, turn skip, and mana recovery).",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -916,7 +912,8 @@
 			"sortingType": ["misc"],
 			"actionType": ["void"],
 			"description": "You don’t need to escape after taking damage. This means that you won’t skip your turn. You still gain mana as if you were escaping.",
-			"upgradeText": "Ignore void damage",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -981,6 +978,8 @@
 			"slotCost": 3,
 			"sortingType": ["protection"],
 			"description": "Your marble can’t take lethal damage from basic attacks (you will have 1 HP left). Can’t stack with Spellproof.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1251,7 +1250,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
-			"description": "This card gains 1 charge whenever you summon an entity. On 6 charges, discharge and gain +1 max mana.",
+			"description": "This card gains 1 charge whenever you summon an entity. On 5 charges, discharge and gain +1 max mana.",
 			"stats": ["Stackable", "", "", ""]
 		},
 		{
@@ -1259,7 +1258,7 @@
 			"rarity": "R",
 			"slotCost": 2,
 			"sortingType": ["hp", "summon"],
-			"description": "This card gains 1 charge whenever you summon an entity. On 8 charges, discharge and gain +1 max HP.",
+			"description": "This card gains 1 charge whenever you summon an entity. On 7 charges, discharge and gain +1 max HP.",
 			"stats": ["Stackable", "", "", ""]
 		},
 		{
@@ -1371,14 +1370,14 @@
 			"name": "Brew of The Dead",
 			"slotCost": 2,
 			"sortingType": ["death"],
-			"description": "Sacrifice 1 HP and activate all your on-death effects. Escape after cast. Can’t be used if you have 1 HP left.",
+			"description": "Sacrifice 1 HP and activate all your on-death effects. Can escape after cast. Can’t be used if you have 1 HP left.",
 			"stats": ["Sacrifice: 1", "Free Use", "", ""]
 		},
 		{
 			"name": "Dragon Scale",
 			"slotCost": 1,
 			"sortingType": ["protection"],
-			"description": "Ignore first damage instance until your next turn.",
+			"description": "Ignore first damage instance until end of your turn.",
 			"stats": ["", "Use at Start", "", ""]
 		},
 		{
@@ -1386,7 +1385,7 @@
 			"slotCost": 2,
 			"sortingType": ["damage"],
 			"actionType": ["projectile"],
-			"description": "A projectile that can bounce from one entity once, resetting its range. Escape after cast.",
+			"description": "A projectile that can bounce from one entity once, resetting its range. Can escape after cast.",
 			"stats": ["Spread Range: 2", "Uses Turn", "Damage: 1", ""]
 		},
 		{
