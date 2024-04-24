@@ -367,7 +367,7 @@
 			"description": "Shoot a penetrating projectile (can damage multiple entities but can’t penetrate walls).",
 			"downgradeText": "Takes 1 slot more",
 			"downgradeEffect": {"slots": 1},
-			"stats": ["Damage: 2", "", "", ""]
+			"stats": ["Range: 5", "Damage: 2", "", ""]
 		},
 		{
 			"name": "Sky Blast",
