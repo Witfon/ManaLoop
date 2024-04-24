@@ -2,6 +2,8 @@
 	"maxAbilitySlots": 5,
 	"maxPassiveSlots": 5,
 	"maxItemSlots": 3,
+	"maxHP": 5,
+	"maxMana": 5,
 	
 	"abilities":
 	[
@@ -1022,11 +1024,11 @@
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
-			"name": "Faith's Edge",
+			"name": "Grand Exit",
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["death", "summon"],
-			"description": "On death, drop all on-field non-player entities above your marble + 1 summoned mine for each ability, passive and item that you had in your deck at the start. These entities can deal damage and will dissapear after last one of them stops.",
+			"description": "On death, drag all non-player entities all the way to your marble. These entities can collide with things and apply their on-collision effects. Entities that reach your marble get destroyed.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "Height: 2-3", "", ""]
@@ -1323,10 +1325,10 @@
 		{
 			"name": "Minewarp",
 			"slotCost": 2,
-			"sortingType": ["mobility", "damage", "summon"],
-			"actionType": ["basic attack", "verge"],
-			"description": "Attack a non-player entity. Then teleport to another non-player entity and perform a basic attack. The used entities will be destroyed. Ignore all damage while preforming this attack. Can verge on entities.",
-			"stats": ["Range: 3", "Free Use", "Move Dist: 1", ""]
+			"sortingType": ["mobility", "summon"],
+			"actionType": ["verge"],
+			"description": "Attack a non-player entity (ignore damage from this entity, can verge), then teleport to another non-player entity. The used entities will be destroyed.",
+			"stats": ["Range: 4", "Use at Start", "", ""]
 		},
 		{
 			"name": "Vampire Mine",
@@ -1334,7 +1336,7 @@
 			"sortingType": ["summon", "hp"],
 			"actionType": ["mine"],
 			"description": "Summon a special mine. Heal 1 HP when a player is damaged by this mine.",
-			"stats": ["Range: 3", "Use at Start", "Max mines: 9", ""]
+			"stats": ["Range: 4", "Use at Start", "Max mines: 9", ""]
 		},
 		{
 			"name": "Ballistic Net",
@@ -1378,7 +1380,7 @@
 			"slotCost": 1,
 			"sortingType": ["protection"],
 			"description": "Ignore first damage instance until end of your turn.",
-			"stats": ["", "Use at Start", "", ""]
+			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Thunder Script",
@@ -1429,7 +1431,7 @@
 		},
 		{
 			"name": "Upgrade Injection",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"description": "Upgrade all your cards and ignore all downgrades. Effect lasts until you take damage (self-damage included).",
 			"stats": ["", "Free Use", "", ""]
@@ -1439,7 +1441,7 @@
 			"slotCost": 1,
 			"sortingType": ["mobility"],
 			"description": "Teleport an entity away from your position (can’t teleport into the void).",
-			"stats": ["Range: 3", "Free Use", "Distance: 2", ""]
+			"stats": ["Range: 3", "Free Use", "Distance: 3", ""]
 		},
 		{
 			"name": "Cursed Touch",
@@ -1497,12 +1499,11 @@
 			"stats": ["P.Range: 3", "Use at Start", "Max Mines: 2", ""]
 		},
 		{
-			"name": "Black Hole",
-			"slotCost": 1,
+			"name": "Black Hole Propulsion",
+			"slotCost": 2,
 			"sortingType": ["mobility", "summon"],
-			"actionType": ["aoe"],
-			"description": "Drop all on-field non-player entities on your marble. These entities deal/take no damage until the last one stops.",
-			"stats": ["", "Use at Start", "", ""]
+			"description": "Drop all on-field nodes and mines on your marble. These entities can move your marble. They deal/take no damage until the last one stops.",
+			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Mimic",
@@ -1526,11 +1527,11 @@
 			"stats": ["", "Use at Start", "", ""]
 		},
 		{
-			"name": "Upgrade Block",
+			"name": "Healing Block",
 			"slotCost": 1,
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
-			"description": "Disable another player’s upgrade card until the start of your next turn while activating all their downgrades. Can use other items after using this card.",
+			"description": "Affected player is not able to recover health. Effect ends if that player deals damage.",
 			"stats": ["Range: 4", "Free Use", "", ""]
 		},
 		{
@@ -1539,11 +1540,11 @@
 			"sortingType": ["damage", "summon"],
 			"actionType": ["mine"],
 			"description": "Enrich a mine, doubling its contact damage.",
-			"stats": ["Range: 3", "Use at Start", "", ""]
+			"stats": ["Range: 4", "Free Use", "", ""]
 		},
 		{
 			"name": "Blight",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
 			"description": "Blind a player until the start of your next turn.",
@@ -1559,10 +1560,9 @@
 		},
 		{
 			"name": "Pocket Clover",
-			"slotCost": 1,
+			"slotCost": 2,
 			"sortingType": ["misc"],
-			"actionType": ["basic attack"],
-			"description": "If you missed your basic attack this turn, redo it once.",
+			"description": "If you missed an attack this turn, redo it once. Effect wears out after triggering.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1577,9 +1577,8 @@
 			"name": "Impulse Jelly",
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"actionType": ["mine"],
-			"description": "Summon a special mine (P.Range: 4). At the start of your next turn, all in-range entities are moved towards that mine. Destroy the mine afterwards.",
-			"stats": ["A.Range: 3", "Free Use", "Distance: 2", ""]
+			"description": "Summon a special node (P.Range: 3). At the start of your next turn, all players are teleported towards that mine. Destroy the node afterwards.",
+			"stats": ["A.Range: 4", "Free Use", "Distance: 2", ""]
 		},
 		{
 			"name": "Mana Injection",
@@ -1587,6 +1586,13 @@
 			"sortingType": ["mana"],
 			"description": "Instantly recover 1 mana.",
 			"stats": ["", "Free Use", "", ""]
+		},
+		{
+			"name": "Wyvern Carapace",
+			"slotCost": 2,
+			"sortingType": ["protection"],
+			"description": "Ignore the first external damage instance that you take until the start of your next turn.",
+			"stats": ["", "Use at Start", "", ""]
 		}
 	],
 	
