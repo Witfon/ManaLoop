@@ -1171,7 +1171,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"description": "This card gains 1 charge whenever an item is used. On 3 charges, discharge and gain back one of your used 1-slot items.",
+			"description": "This card gains 1 charge whenever an item is used. On 1 charge, discharge and gain back one of your used 1-slot items. The amount of required charges increases with each living player.",
 			"stats": ["Stackable", "", "", ""]
 		},
 		{
@@ -1433,7 +1433,7 @@
 			"name": "Upgrade Injection",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"description": "Upgrade all your cards and ignore all downgrades. Effect lasts until you take damage (self-damage included).",
+			"description": "Upgrade all your cards and ignore all downgrades. Effect lasts until you take damage from another player. Can use other items after cast.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1448,32 +1448,29 @@
 			"slotCost": 2,
 			"sortingType": ["misc"],
 			"actionType": ["basic attack"],
-			"description": "Damaging a player with a basic attack this turn will cause them to discard one of their abilities.",
-			"stats": ["", "Use at Start", "", ""]
+			"description": "Damaging a player with contact damage this turn will cause them to discard one of their abilities. Triggers once.",
+			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Smiting Touch",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"actionType": ["basic attack"],
-			"description": "Damaging a player with a basic attack this turn will cause them to discard all their items.",
-			"stats": ["", "Use at Start", "", ""]
+			"description": "Damaging a player with contact damage this turn will cause them to discard all their items and allow you to take one of them. Triggers once.",
+			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Freezing Touch",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"actionType": ["basic attack"],
-			"description": "Damaging a player with a basic attack this turn will cause them to discard one of their UPGRADE cards.",
-			"stats": ["", "Use at Start", "", ""]
+			"description": "Damaging a player with contact damage this turn will make them unable to gain mana. Effect lasts until they take next damage. Triggers once.",
+			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Decaying Touch",
 			"slotCost": 2,
 			"sortingType": ["misc"],
-			"actionType": ["basic attack"],
-			"description": "Damaging a player with a basic attack this turn will cause them to discard one of their passives.",
-			"stats": ["", "Use at Start", "", ""]
+			"description": "Damaging a player with contact damage this turn will cause them to discard one of their passives. Triggers once.",
+			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Disposition",
@@ -1531,7 +1528,7 @@
 			"slotCost": 1,
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
-			"description": "Affected player is not able to recover health. Effect ends if that player deals damage.",
+			"description": "Affected player is not able to recover health. Effect ends once that player deals damage.",
 			"stats": ["Range: 4", "Free Use", "", ""]
 		},
 		{
