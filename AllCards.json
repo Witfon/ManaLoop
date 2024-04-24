@@ -61,7 +61,7 @@
 			"sortingType": ["summon"],
 			"actionType": ["mine"],
 			"description": "Summon 3 mines. Use an ability/basic attack after cast.",
-			"stats": ["P.Range: ∞", "Max Mines: 9", "", ""]
+			"stats": ["P.Range: ∞", "Max Mines: 12", "", ""]
 		},
 		{
 			"name": "Arise",
@@ -252,7 +252,7 @@
 			"sortingType": ["damage", "summon"],
 			"actionType": ["mine"],
 			"description": "Pull up to 2 mines to your position and attack with them. If there are less than 2 mines nearby, you can summon mines for the attack at your position until you have 2 mines. Spend 1 mana for each mine summoned. Can escape after cast.",
-			"stats": ["Pull Range: 2", "Damage: 1+1", "Max Mines: 6", ""]
+			"stats": ["Pull Range: 2", "Damage: 1+1", "Max Mines: 6", "P.Range: 1"]
 		},
 		{
 			"name": "Bash",
@@ -302,7 +302,7 @@
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
 			"actionType": ["verge"],
-			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a non-player entity (can verge). If you hit, repeat this action (until you miss). Recover 1 mana for each destroyed enty.",
+			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a non-player entity (can verge). If you hit, repeat this action (until you miss or reach max mana). Recover 1 mana for each destroyed enty.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Damage: 1", "No Cooldown", "", ""]
@@ -753,7 +753,7 @@
 			"description": "Summon 10 mines on death.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Stackable", "P.Range: 5", "", ""]
+			"stats": ["Stackable", "P.Range: 4", "", ""]
 		},
 		{
 			"name": "Pacifist",
@@ -1033,7 +1033,7 @@
 			"description": "On death, drag all non-player entities all the way to your marble. These entities can collide with things and apply their on-collision effects. Entities that reach your marble get destroyed.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Unstackable", "Height: 2-3", "", ""]
+			"stats": ["Unstackable", "Range: ∞", "", ""]
 		},
 		{
 			"name": "Scorching Aura",
@@ -1049,7 +1049,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["hp"],
-			"description": "You can skip a turn without acting or moving (will still give you mana). The following turns that you skip in a succession will regenerate 1 HP to you.",
+			"description": "You can skip a turn without acting or moving (will still give you mana). The following turns that you skip without being moved or damaged will regenerate 1 HP to you.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
