@@ -15,6 +15,8 @@
 			"sortingType": ["damage"],
 			"actionType": ["projectile"],
 			"description": "Shoot a projectile in a straight line. All entities that come in contact with its effect area will be attached to it. Explodes after touching a wall with its effect area, damaging all attached entities.",
+			"downgradeText": "Costs 1 more",
+			"downgradeEffect": {"manaCost": 1},
 			"stats": ["Range: ∞", "A.Damage: 1", "A.Range: 1", ""]
 		},
 		{
@@ -44,13 +46,11 @@
 		{
 			"name": "Draconic Wings",
 			"rarity": "L",
-			"slotCost": 3,
-			"manaCost": 3,
+			"slotCost": 2,
+			"manaCost": 4,
 			"sortingType": ["damage", "protection"],
 			"actionType": ["slash", "basic attack"],
 			"description": "Fly to the target and slash it. Use a basic attack after 3 seconds. Ignore all damage while preforming this ability.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 3", "Damage: 1+1", "", ""]
 		},
 		{
