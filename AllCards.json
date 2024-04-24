@@ -1379,7 +1379,7 @@
 			"name": "Dragon Scale",
 			"slotCost": 1,
 			"sortingType": ["protection"],
-			"description": "Ignore first damage instance until end of your turn.",
+			"description": "Ignore first external damage instance until end of your turn.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1588,7 +1588,7 @@
 			"name": "Wyvern Carapace",
 			"slotCost": 2,
 			"sortingType": ["protection"],
-			"description": "Ignore the first external damage instance that you take until the start of your next turn.",
+			"description": "Ignore the first external damage instance until the start of your next turn.",
 			"stats": ["", "Use at Start", "", ""]
 		}
 	],
