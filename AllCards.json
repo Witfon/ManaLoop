@@ -818,7 +818,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["mana"],
-			"mana": 1,
+			"mana": 2,
 			"description": "Increases your max mana by 2.",
 			"stats": ["Unstackable", "", "", ""]
 		},
@@ -972,10 +972,10 @@
 		},
 		{
 			"name": "Multispecialist",
-			"rarity": "R",
+			"rarity": "L",
 			"slotCost": 0,
 			"sortingType": ["misc", "mana"],
-			"description": "Your abilities only take 1 slot and are upgraded, but you can only use each one once. Start the game with 5 loaded mana.",
+			"description": "Your abilities only take 1 slot and are upgraded, but you can only use each one once (max 10 abilities in deck). Start the game with 5 loaded mana.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
