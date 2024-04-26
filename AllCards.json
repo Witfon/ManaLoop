@@ -1663,12 +1663,14 @@
 	{
 		"name": "Overdrive",
 		"slotCost": -1,
+		"hp": -2,
 		"description": "Gives you 1 extra deck slot, but reduces your max HP by 2.",
 		"stats": ["Stackable", "", "", ""]
 	},
 	{
 		"name": "Overgrowth",
 		"slotCost": -1,
+		"mana": -3,
 		"description": "Gives you 1 extra deck slot, but reduces your max mana by 3.",
 		"stats": ["Stackable", "", "", ""]
 	}
