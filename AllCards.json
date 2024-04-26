@@ -1318,7 +1318,7 @@
 			"slotCost": 3,
 			"sortingType": ["damage", "misc"],
 			"actionType": ["void"],
-			"description": "When moving using flying actions, draw a line from your take-off position to your landing. Entities that cross these lines take 1 void damage. Destroy all your lines when you are healed or take void damage.",
+			"description": "When moving using flying actions, draw a line from your take-off position to your landing. Entities that cross these lines take 1 void damage (new lines activate at the end of your turn). Destroy all your lines when you are healed or take void damage.",
 			"stats": ["Unstackable", "", "", ""]
 		}
 	],
