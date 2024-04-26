@@ -143,7 +143,9 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["summon", "damage"],
-			"description": "Entomb the target in a static barrier. Moving horizontally into the barrier causes it to explode, dealing 1 damage to whoever touched it (applies to entombed target too).",
+			"description": "Entomb the target in a special barrier. Moving in the barrier or hitting it will destroy it and deal damage to the moving target and whatever is inside. Does not trigger if the entombed entity uses teleport or flying actions.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 1", "Damage: 2", "", ""]
 		},
 		{
@@ -174,6 +176,8 @@
 			"slotCost": 1,
 			"sortingType": ["summon"],
 			"description": "Summon an indestructible node. Players that hit the node will be stopped in place, allowing them to reset the range of their current attack. Use a basic attack after cast.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 4", "Max Shrooms: 5", "", ""]
 		},
 		{
@@ -189,7 +193,7 @@
 			"name": "Meteor Strike",
 			"rarity": "R",
 			"manaCost": 3,
-			"slotCost": 1,
+			"slotCost": 2,
 			"sortingType": ["damage"],
 			"actionType": ["aoe"],
 			"description": "Lift your marble in the air at your position and toss it at your target, creating an explosion at the first ground contact. Impact damage is doubled.",
@@ -222,7 +226,7 @@
 			"manaCost": 2,
 			"slotCost": 1,
 			"sortingType": ["damage", "hp"],
-			"description": "Attack any entity. If you damage it, recover 1 hp to yourself.",
+			"description": "Attack a target. If you damage it, recover 1 HP to yourself.",
 			"stats": ["Range: 4", "Damage: 1", "Heal: 1", ""]
 		},
 		{
@@ -232,7 +236,7 @@
 			"slotCost": 1,
 			"sortingType": ["damage"],
 			"description": "Attack an enemy with your eyes closed. Can escape after cast.",
-			"stats": ["Range: 4", "Damage: 2", "", ""]
+			"stats": ["Damage: 2", "", "", ""]
 		},
 		{
 			"name": "Barrier",
@@ -240,9 +244,9 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["summon"],
-			"description": "Summon a barrier and use a basic attack. Consecutive uses will move the barrier (if in range) and give you an extra turn.",
+			"description": "Summon a barrier and use a basic attack. Consecutive uses will move the barrier (if in range) and give you an extra action.",
 			"upgradeText": "Width: 2",
-			"stats": ["Range: 4", "Max 1 Barrier", "Width: 1", "No Cooldown"]
+			"stats": ["P.Range: 4", "Max 1 Barrier", "Width: 1", "Range: 5"]
 		},
 		{
 			"name": "Mine Launcher",
@@ -302,7 +306,7 @@
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
 			"actionType": ["verge"],
-			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a non-player entity (can verge). If you hit, repeat this action (until you miss or reach max mana). Recover 1 mana for each destroyed enty.",
+			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a spawn (can verge). If you hit, repeat this action (until you miss or reach max mana). Recover 1 mana for each destroyed spawn.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Damage: 1", "No Cooldown", "", ""]
@@ -399,8 +403,6 @@
 			"sortingType": ["damage"],
 			"actionType": ["projectile"],
 			"description": "A hopping projectile that resets its range after hitting any wall/barrier. Can hit multiple walls/barriers but can’t penetrate them. Must bounce at least once in order to deal damage.",
-			"downgradeText": "Costs 1 more",
-			"downgradeEffect": {"manaCost": 1},
 			"stats": ["Range: 3", "Damage: 1", "", ""]
 		},
 		{
@@ -431,11 +433,11 @@
 			"name": "Nether Rift",
 			"rarity": "R",
 			"manaCost": 3,
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["misc", "summon"],
-			"description": "Destroy all non-player entities.",
-			"upgradeText": "Costs 1 less and takes 1 slot less",
-			"upgradeEffect": {"slots": 1, "manaCost": 1},
+			"description": "Destroy all non-player entities. Discard this card after cast.",
+			"upgradeText": "Costs 3 less",
+			"upgradeEffect": {"manaCost": 1},
 			"stats": ["Range: ∞", "", "", ""]
 		},
 		{
@@ -497,7 +499,7 @@
 			"slotCost": 1,
 			"sortingType": ["damage", "hp"],
 			"actionType": ["verge"],
-			"description": "Attack a player 3 times without changing your position or dealing damage, (3 seconds cooldown after each attack, can verge once). If you hit 3 times, damage the target, steal 1 mana, and recover 1 HP.",
+			"description": "Attack a player 3 times without changing your position or dealing damage, (can verge once). If you hit 3 times, damage the target, reduce their max mana by 1, and recover 1 HP.",
 			"stats": ["Damage: 2", "Heal: 1", "", ""]
 		},
 		{
@@ -539,7 +541,7 @@
 			"slotCost": 1,
 			"sortingType": ["hp", "summon"],
 			"actionType": ["mine"],
-			"description": "Summon 2 healing mines (min distance between mines: 1). When a player destroys this mine, they regenerate 1 HP. Escape after cast (can’t heal from these mines until end of this turn).",
+			"description": "Summon 2 HP nodes (min distance between nodes: 1). Escape after cast.",
 			"upgradeText": "Costs 1 less",
 			"upgradeEffect": {"manaCost": 1},
 			"stats": ["P.Range: 4", "Max Bananas: 4", "", ""]
@@ -572,10 +574,10 @@
 			"slotCost": 1,
 			"sortingType": ["damage"],
 			"actionType": ["projectile", "aoe"],
-			"description": "Bash away all entities in a wide line. Affected entities gain +1 contact damage until they stop (they only take damage after they stop).",
+			"description": "Shoot a wide projectile. Attack with all affectedentities. These attacks have a 90° angle limit. Entities to the left of the projectile can attack in a left-forward facing cone. Opposite cone for right entities.",
 			"downgradeText": "Costs 1 more",
 			"downgradeEffect": {"manaCost": 1},
-			"stats": ["Range: 2", "Damage: 1", "Width: 2", ""]
+			"stats": ["Range: 2", "Width: 3", "", ""]
 		},
 		{
 			"name": "Poison Sting",
@@ -584,10 +586,10 @@
 			"slotCost": 1,
 			"sortingType": ["damage", "misc"],
 			"actionType": ["effect"],
-			"description": "Attack a target. The target will take 1 extra damage on your next turn. The second damage instance will not trigger escape and on-death effects. Players that die from this ability won't trigger their on-death effects.",
+			"description": "Attack a target. The target will take 1 extra soft damage on your next turn. Players that die from this ability won't trigger their on-death effects.",
 			"downgradeText": "Takes 1 slot more",
 			"downgradeEffect": {"slots": 1},
-			"stats": ["Damage: 1+1", "", "", ""]
+			"stats": ["Damage: 1+1", "Effect", "", ""]
 		},
 		{
 			"name": "Berserk Strike",
@@ -615,8 +617,8 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Summon a point and give yourself an extra action. When a second point is summoned, they get linked. Hitting one of them will teleport you to the other one, from which you can reset your attack range. Only players with this card can use the portals. You can only have one portal pair.",
-			"stats": ["P.Range: 4", "", "", ""]
+			"description": "Summon a point and give yourself an extra action. When a second point is summoned, they get linked. Hiting the effect area of one teleport you to the other one, from which you can reset your attack range (also works for your projectiles, max 1 tp per turn). Only players with this card can use the portals.",
+			"stats": ["P.Range: 4", "A.Range: 1", "Max portal pairs: 1", ""]
 		},
 		{
 			"name": "Death's Touch",
@@ -635,7 +637,7 @@
 			"slotCost": 2,
 			"sortingType": ["damage", "misc"],
 			"actionType": ["aoe"],
-			"description": "Damage everything in a wide line. If a player dies from this ability, they can not be resurrected this game and this ability gains +1 damage.",
+			"description": "Shoot a projectile that damages everything else in a wide line. If a player dies from this ability, it gains +1 damage.",
 			"stats": ["Range: 2", "Damage: 1+", "A.Range: 1", ""]
 		},
 		{
@@ -654,7 +656,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Move all non-player entities. Can escape after cast.",
+			"description": "Move all movable non-player entities. Can escape after cast.",
 			"stats": ["Range: ∞", "", "", ""]
 		},
 		{
@@ -789,7 +791,7 @@
 			"slotCost": 1,
 			"sortingType": ["death", "damage"],
 			"actionType": ["aoe"],
-			"description": "Explode on death after your marble stops or hits a non-player entity, dealing 1 damage. Adittional stacks increase S.Range by 1 level but don’t affect damage.",
+			"description": "Explode on death at your position, dealing 1 damage. Adittional stacks increase S.Range by 1 level but don’t affect damage.",
 			"stats": ["Stackable", "S.Range: 3", "", ""]
 		},
 		{
@@ -948,7 +950,7 @@
 			"slotCost": 1,
 			"sortingType": ["protection"],
 			"actionType": ["void"],
-			"description": "When damaged by a non-player entity, ignore the damage and empty one mana. If you don’t have enough mana, the damage targets your HP.",
+			"description": "When damaged by a mine, ignore the damage and empty one mana. If you don’t have enough mana, the damage targets your HP.",
 			"upgradeText": "Also applies to void damage, takes 1 slot less",
 			"stats": ["Unstackable", "", "", ""]
 		},
@@ -1029,11 +1031,11 @@
 			"name": "Grand Exit",
 			"rarity": "C",
 			"slotCost": 1,
-			"sortingType": ["death", "summon"],
-			"description": "On death, drag all non-player entities all the way to your marble. These entities can collide with things and apply their on-collision effects. Entities that reach your marble get destroyed.",
+			"sortingType": ["death", "damage", "summon"],
+			"description": "On death, shoot piercing projectiles from all spawns towards your marble. This death effect will always trigger first.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Unstackable", "Range: ∞", "", ""]
+			"stats": ["Unstackable", "Damage: 1", "", ""]
 		},
 		{
 			"name": "Scorching Aura",
@@ -1059,10 +1061,10 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["summon", "hp"],
-			"description": "Whenever a player is healed, destroy 3 non-player entities.",
+			"description": "Whenever a player is healed, you can destroy up to 4 spawns.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Stackable", "Range: ∞", "", ""]
+			"stats": ["Stackable", "Range: 4", "", ""]
 		},
 		{
 			"name": "Ichor",
@@ -1112,8 +1114,6 @@
 			"sortingType": ["misc"],
 			"actionType": ["verge"],
 			"description": "All your physical abilities can verge.",
-			"downgradeText": "Takes 1 slot more",
-			"downgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1241,7 +1241,9 @@
 			"rarity": "L",
 			"slotCost": 1,
 			"sortingType": ["hp"],
-			"description": "Doubles your max HP but you take double damage from other player attacks (does not affect damage from non-player entities).",
+			"description": "Doubles your max HP but you take double damage from other player attacks (does not affect damage from non-player entities and void damage).",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1334,8 +1336,8 @@
 			"slotCost": 2,
 			"sortingType": ["mobility", "summon"],
 			"actionType": ["verge"],
-			"description": "Attack a non-player entity (ignore damage from this entity, can verge), then teleport to another non-player entity. The used entities will be destroyed.",
-			"stats": ["Range: ∞", "Use at Start", "", ""]
+			"description": "If you hit a spawn this turn, you can teleport to another spawn and reset your attack range (ignore damage from this spawn). The used spawns will be destroyed. You can verge on spawns this turn.",
+			"stats": ["Range: ∞", "Free Use", "", ""]
 		},
 		{
 			"name": "Vampire Mine",
@@ -1483,8 +1485,8 @@
 			"name": "Disposition",
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Move a non-player entity.",
-			"stats": ["Range: ∞", "Free Use", "Distance: 4", ""]
+			"description": "Move a non-player entity. Can move barriers.",
+			"stats": ["Range: ∞", "Free Use", "Distance: 5", ""]
 		},
 		{
 			"name": "Detonate",
