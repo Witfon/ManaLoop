@@ -826,8 +826,8 @@
 			"slotCost": 1,
 			"sortingType": ["hp", "mana"],
 			"hp": 1,
-			"mana": 2,
-			"description": "Increases your max HP by 1 and max mana by 2.",
+			"mana": 1,
+			"description": "Increases your max HP by 1 and max mana by 1.",
 			"downgradeText": "Takes 1 slot more",
 			"downgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
