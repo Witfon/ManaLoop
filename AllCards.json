@@ -520,7 +520,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "An attack that deals 1 additional damage for each time your marble bounces off a wall or a non player entity.",
+			"description": "An attack that deals 1 additional damage for each time your marble bounces off a wall or a barrier.",
 			"stats": ["Damage: 1+", "", "", ""]
 		},
 		{
@@ -922,7 +922,8 @@
 			"description": "Start the game with 5 charged mana.",
 			"downgradeText": "Takes 1 slot more",
 			"downgradeEffect": {"slots": 1},
-			"stats": ["Unstackable", "", "", ""]
+			"stats": ["Unstackable", "", "", ""],
+			"disabled": true
 		},
 		{
 			"name": "Magic Shield",
@@ -1329,6 +1330,7 @@
 			"slotCost": 3,
 			"sortingType": ["misc"],
 			"description": "Gives you 15 additional item slots, but your abilities are discarded after use. Not stackable with Multispecialist.",
+			"itemSlots": -15,
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
