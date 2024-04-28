@@ -825,11 +825,13 @@
 		{
 			"name": "Mana Barrier",
 			"rarity": "L",
-			"slotCost": 2,
+			"slotCost": 3,
 			"sortingType": ["protection"],
-			"description": "Whenever you takes damage, reduce your max mana equal to damage taken instead of taking HP damage (your max mana acts like adittional HP).",
+			"description": "Whenever you takes damage, reduce your max mana equal to damage taken instead of taking HP damage (until you reach 0 max mana). Your abilities cost HP once you reach 0 max mana. Reduces your ability slots by 2.",
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
+			"abilitySlots": 2,
 			"stats": ["Unstackable", "", "", ""],
-			"disabled": true
 		},
 		{
 			"name": "Rainbow Gem",
