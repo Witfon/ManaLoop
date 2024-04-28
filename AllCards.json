@@ -1348,6 +1348,17 @@
 			"description": "Gives you 2 additional passive slots, but you start the game at 1 HP.",
 			"passiveSlots": -2,
 			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Mana Barrier",
+			"rarity": "L",
+			"slotCost": 3,
+			"sortingType": ["protection"],
+			"description": "Instead of taking HP damage, reduce your max mana by the damage amount. Your abilities cost HP when you reach 0 max mana. Reduces your ability slots by 2.",
+			"abilitySlots": 2,
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
 		}
 	],
 	
