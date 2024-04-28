@@ -707,7 +707,7 @@
 			"manaCost": 0,
 			"slotCost": 4,
 			"sortingType": ["damage"],
-			"description": "Use up all your mana and damage everything in a 90° cone. Give this ability +1 damage OR +1 range level for each mana point that you spend.",
+			"description": "Use up all your mana and damage everything in a 90° cone. Give this ability +1 damage OR +1 range level for each mana that you spend.",
 			"stats": ["Start Range: 0", "Start Damage: 0", "Max Range: 5", "Max Damage: 5"]
 		},
 		{
@@ -1277,7 +1277,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
-			"description": "This card gains 1 charge whenever you summon an entity. On 4 charges, discharge and gain +1 max mana.",
+			"description": "This card gains 1 charge whenever you summon an entity. On 5 charges, discharge and gain +1 max mana.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
