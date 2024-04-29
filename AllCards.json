@@ -283,11 +283,11 @@
 		{
 			"name": "Possession",
 			"rarity": "R",
-			"manaCost": 1,
+			"manaCost": 2,
 			"slotCost": 1,
 			"sortingType": ["damage", "misc"],
 			"description": "Attack with another entity. This attack has the damage and effect of the entity. If the entity has no contact damage, the attack will deal 1 damage.",
-			"upgradeText": "Range: 5",
+			"upgradeText": "Range: 4",
 			"stats": ["Range: 3", "", "", ""]
 		},
 		{
@@ -425,7 +425,7 @@
 			"slotCost": 1,
 			"sortingType": ["damage", "protection"],
 			"actionType": ["verge", "basic attack"],
-			"description": "Use a basic attack and return to your starting position after your marble stops (can verge). You are immune to damage while using this ability.",
+			"description": "Attack and return to your starting position after your marble stops (can verge). You are immune to damage while using this ability.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Damage: 1", "", "", ""]
@@ -521,7 +521,7 @@
 			"slotCost": 1,
 			"sortingType": ["damage"],
 			"description": "An attack that deals 1 additional damage for each time your marble bounces off a wall or a barrier.",
-			"stats": ["Damage: 1+", "", "", ""]
+			"stats": ["Damage: 1+", "Max Damage: 3", "", ""]
 		},
 		{
 			"name": "Flamethrower",
@@ -571,13 +571,11 @@
 		{
 			"name": "Shockwave",
 			"rarity": "C",
-			"manaCost": 1,
+			"manaCost": 2,
 			"slotCost": 1,
 			"sortingType": ["damage"],
 			"actionType": ["projectile", "aoe"],
-			"description": "Shoot a wide projectile. Attack with all affectedentities. These attacks have a 90° angle limit. Entities to the left of the projectile can attack in a left-forward facing cone. Opposite cone for right entities.",
-			"downgradeText": "Costs 1 more",
-			"downgradeEffect": {"manaCost": 1},
+			"description": "Shoot a wide projectile. Attack with all affected entities. These attacks have a 90° angle limit. Entities to the left of the projectile can attack in a left-forward facing cone. Opposite cone for right entities.",
 			"stats": ["Range: 2", "Width: 3", "", ""]
 		},
 		{
@@ -618,7 +616,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Summon a point and give yourself an extra action. When a second point is summoned, they get linked. Hiting the effect area of one teleport you to the other one, from which you can reset your attack range (also works for your projectiles, max 1 tp per turn). Only players with this card can use the portals.",
+			"description": "Summon a point and give yourself an extra action. When a second point is summoned, they get linked. Hiting the effect area of one teleport you to the other one, from which you can reset your attack range (max 1 tp per turn, also works for your projectiles). Only players with this card can use the portals.",
 			"stats": ["P.Range: 4", "A.Range: 1", "Max portal pairs: 1", ""]
 		},
 		{
@@ -686,10 +684,10 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
-			"description": "Summon a special barrier and escape. When hit by a projectile, the barrier resets the projectile's range, allowing the caster to shoot it again from the impact point (can not penetrate the barrier). Consecutive uses will move the barrier (if in range) and give you an extra action.",
+			"description": "Summon a special barrier and escape. When hit by a projectile, the barrier resets the projectile's range, allowing the caster to shoot it again from the impact spot (can not penetrate the barrier). Consecutive uses will move the barrier (if in range) and give you an extra action.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Range: 4", "Width: 1", "", ""]
+			"stats": ["Range: 5", "Width: 1", "", ""]
 		},
 		{
 			"name": "Warp Mine",
@@ -707,7 +705,7 @@
 			"manaCost": 0,
 			"slotCost": 4,
 			"sortingType": ["damage"],
-			"description": "Use up all your mana and damage everything in a 90° cone. Give this ability +1 damage OR +1 range level for each mana that you spend.",
+			"description": "Use up to 6 mana and damage everything in a 90° cone. Give this ability +1 damage OR +1 range level for each mana that you spend. Will always use as much mana as possible.",
 			"stats": ["Start Range: 0", "Start Damage: 0", "Max Range: 5", "Max Damage: 5"]
 		},
 		{
@@ -716,7 +714,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
-			"description": "Summon a point and use a basic attack. The point creates a copy of any projectile that hits it and resets its range. Area effects of these projectiles can't affect same target twice.",
+			"description": "Summon a point and use a basic attack. The point creates a copy of any projectile that hits it and resets the range of both. Area effects of these projectiles can't affect same target twice.",
 			"stats": ["Max Prisms: 1", "", "", ""]
 		},
 		{
@@ -725,7 +723,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"description": "Use the effect of your last used item. This does not count as item use. Mana cost is equal to your last used items' slot cost.",
+			"description": "Use the effect of your last used item. This does not count as item use. Mana cost is equal to your last used items' slot cost. Give yourself an extra action if the item is 'Free Use' or 'Use at Start'.",
 			"stats": ["", "", "", ""]
 		}
 	],
@@ -758,8 +756,18 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["mana"],
-			"description": "Gain +2 max mana when a player dies.",
-			"upgradeText": "Takes 1 slot less, +3 max mana on trigger",
+			"description": "Recover 4 mana when a player dies.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Dominance",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["hp"],
+			"description": "Recover 2 hp when a player dies.",
+			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Stackable", "", "", ""]
 		},
@@ -780,7 +788,7 @@
 			"slotCost": 1,
 			"sortingType": ["death", "summon"],
 			"actionType": ["mine"],
-			"description": "Summon 10 mines on death.",
+			"description": "Summon 8 mines on death.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Stackable", "P.Range: 4", "", ""]
@@ -857,7 +865,7 @@
 			"slotCost": 1,
 			"sortingType": ["summon"],
 			"actionType": ["mine"],
-			"description": "Summon a living mine for each point of damage that you take.",
+			"description": "Summon a living mine for each point of damage that you take. These living mines can't move on your next turn.",
 			"stats": ["Unstackable", "P.Range: 1", "", ""]
 		},
 		{
@@ -990,6 +998,8 @@
 			"sortingType": ["protection", "summon"],
 			"actionType": ["mine"],
 			"description": "Your mines can only take damage from player impact.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1052,7 +1062,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["death", "damage", "summon"],
-			"description": "On death, shoot piercing projectiles from all spawns towards your marble. This death effect will always trigger first.",
+			"description": "On death, shoot piercing projectiles from all spawns towards your marble that damage everything except for you. This death effect will always trigger first.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "Damage: 1", "", ""]
@@ -1172,11 +1182,11 @@
 		},
 		{
 			"name": "Cursed Soul",
-			"rarity": "R",
-			"slotCost": 2,
+			"rarity": "C",
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"actionType": ["effect", "basic attack"],
-			"description": "When your marble lands a basic attack, blind the target for 1 turn.",
+			"description": "When your marble lands a basic attack, blind the target for 1 of their turns.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1185,7 +1195,7 @@
 			"slotCost": 2,
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
-			"description": "When your marble is hit by a basic attack, blind the attacker for 1 turn.",
+			"description": "When your marble is hit by a basic attack, blind the attacker for 1 of their turns.",
 			"downgradeText": "Takes 1 slot more",
 			"downgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
@@ -1278,8 +1288,8 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
-			"description": "This card gains 1 charge whenever you summon an entity. On 5 charges, discharge and gain +1 max mana.",
-			"stats": ["Unstackable", "", "", ""]
+			"description": "This card gains 1 charge whenever you summon an entity. On 4 charges, discharge and recover 1 mana.",
+			"stats": ["Stackable", "", "", ""]
 		},
 		{
 			"name": "Infinite Growth",
@@ -1419,7 +1429,7 @@
 			"sortingType": ["summon", "hp"],
 			"actionType": ["mine"],
 			"description": "Summon a special mine. Heal 1 HP when a player is damaged by this mine.",
-			"stats": ["P.Range: ∞", "Use at Start", "Max mines: 9", ""]
+			"stats": ["P.Range: 3", "Use at Start", "Max mines: 9", ""]
 		},
 		{
 			"name": "Ballistic Net",
@@ -1575,14 +1585,14 @@
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
 			"actionType": ["mine", "aoe"],
-			"description": "Summon a special mine that will stop any player that moves into effect range (A.Range: 1) (will not work if the player is already in the affected area).",
+			"description": "Summon a special mine that will stop any player that moves into effect range from outside (A.Range: 1). Will also destroy projectiles that enter it from outside.",
 			"stats": ["P.Range: 3", "Use at Start", "Max Mines: 2", ""]
 		},
 		{
 			"name": "Black Hole Propulsion",
 			"slotCost": 2,
 			"sortingType": ["mobility", "summon"],
-			"description": "Drop all on-field nodes and mines on your marble. These entities can move your marble. They deal/take no damage until the last one stops.",
+			"description": "Drop all on-field spawns on your marble. These entities can move your marble. They deal/take no damage until the last one stops.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1657,7 +1667,7 @@
 			"name": "Impulse Jelly",
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Summon a special node (P.Range: 3). At the start of your next turn, all players are teleported towards that mine. Destroy the node afterwards.",
+			"description": "Summon a special node (P.Range: 3). At the start of your next turn, all players are teleported towards that node. Destroy the node afterwards.",
 			"stats": ["A.Range: 5", "Free Use", "Distance: 2", ""]
 		},
 		{
