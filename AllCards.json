@@ -1724,7 +1724,7 @@
 		"name": "Tinkerer",
 		"slotCost": 0,
 		"itemSlots": 3,
-		"description": "Your upgrade cards can upgrade twice as many cards, but reduces your max item slots by 3",
+		"description": "Your upgrade card can upgrade twice as many cards, but reduces your max item slots by 3. You can only equip this card in one deck.",
 		"stats": ["Unstackable", "", "", ""]
 	},
 	{
