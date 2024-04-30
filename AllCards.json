@@ -1705,7 +1705,7 @@
 	"upgrades":
 	[
 	{
-		"name": "UPGRADE - Ability",
+		"name": "UPGRADE Ability",
 		"slotCost": 1,
 		"description": "Upgrades 3 upgradable abilities.",
 		"upgradeLimit": 3,
@@ -1713,7 +1713,7 @@
 		"stats": ["Unstackable", "", "", ""]
 	},
 	{
-		"name": "UPGRADE - Passive",
+		"name": "UPGRADE Passive",
 		"slotCost": 1,
 		"description": "Upgrades 3 upgradable passives.",
 		"upgradeLimit": 3,
