@@ -1705,11 +1705,20 @@
 	"upgrades":
 	[
 	{
-		"name": "Universal Upgrade",
+		"name": "UPGRADE - Ability",
 		"slotCost": 1,
-		"description": "Upgrades 3 upgradable cards.",
+		"description": "Upgrades 3 upgradable abilities.",
 		"upgradeLimit": 3,
-		"stats": ["Max 1 per deck", "", "", ""]
+		"restrictedToDeck": "Ability",
+		"stats": ["Unstackable", "", "", ""]
+	},
+	{
+		"name": "UPGRADE - Passive",
+		"slotCost": 1,
+		"description": "Upgrades 3 upgradable passives.",
+		"upgradeLimit": 3,
+		"restrictedToDeck": "Passive",
+		"stats": ["Unstackable", "", "", ""]
 	},
 	{
 		"name": "Tinkerer",
