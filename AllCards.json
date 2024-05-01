@@ -279,10 +279,10 @@
 		{
 			"name": "Possession",
 			"rarity": "R",
-			"manaCost": 2,
+			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["damage", "misc"],
-			"description": "Attack with another entity. This attack has the damage and effect of the entity. If the entity has no contact damage, the attack will deal 1 damage.",
+			"description": "Attack with another entity. This attack has the damage and effect of the entity. If the entity has no contact damage, the attack won't deal damage.",
 			"upgradeText": "Range: 4",
 			"stats": ["Range: 3", "", "", ""]
 		},
