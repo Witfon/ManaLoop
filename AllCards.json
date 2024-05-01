@@ -1704,8 +1704,8 @@
 			"slotCost": 2,
 			"sortingType": ["summon", "damage"],
 			"actionType": ["mine"],
-			"description": "Summon a special mine. This mine deals 1 damage to the nearest entity with HP at the start of your every turn.",
-			"stats": ["Range: 5", "Free Use", "Max Mines: 3", ""]
+			"description": "Summon a special mine (P.Range: 5). This mine deals 1 damage to the nearest entity with HP at the start of your every turn.",
+			"stats": ["A.Range: 2", "Free Use", "Max Mines: 3", ""]
 		},
 		{
 			"name": "Rewind Cassette",
