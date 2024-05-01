@@ -12,25 +12,21 @@
 		{
 			"name": "Magnetic Blast",
 			"rarity": "L",
-			"slotCost": 3,
+			"slotCost": 2,
 			"manaCost": 5,
 			"sortingType": ["damage"],
 			"actionType": ["projectile"],
-			"description": "Shoot a projectile in a straight line. All entities that come in contact with its effect area will be attached to it. Explodes after touching a wall with its effect area, damaging all attached entities.",
-			"downgradeText": "Costs 1 more",
-			"downgradeEffect": {"manaCost": 1},
-			"stats": ["Range: ∞", "A.Damage: 1", "A.Range: 1", ""]
+			"description": "Shoot an explosive piercing projectile and disable effects of all spawns until this attack ends. All non-barrier entities that come in contact with its effect area will be attached to it. Explodes after touching a wall/barrier with its effect area, damaging all attached entities.",
+			"stats": ["Range: ∞", "Damage: 1", "A.Range: 1", "Final Explosion S.Range: 2"]
 		},
 		{
 			"name": "360 No-Scope",
-			"rarity": "L",
+			"rarity": "R",
 			"slotCost": 2,
 			"manaCost": 4,
 			"sortingType": ["damage"],
 			"actionType": ["projectile"],
 			"description": "Shoot a projectile.",
-			"downgradeText": "Takes 1 slot more",
-			"downgradeEffect": {"slots": 1},
 			"stats": ["Range: 5", "Damage: 1", "", ""]
 		},
 		{
@@ -41,8 +37,6 @@
 			"sortingType": ["damage"],
 			"actionType": ["aoe"],
 			"description": "Deal damage to all players, including yourself (does not trigger escape).",
-			"downgradeText": "Takes 1 slot more",
-			"downgradeEffect": {"slots": 1},
 			"stats": ["Damage: 1", "", "", ""]
 		},
 		{
@@ -52,7 +46,7 @@
 			"manaCost": 4,
 			"sortingType": ["damage", "protection"],
 			"actionType": ["slash", "basic attack"],
-			"description": "Fly to the target and slash it. Use a basic attack after 3 seconds. Ignore all damage while preforming this ability.",
+			"description": "Fly to the target and slash it. Use an ability/basic attack after cast. Ignore all external damage until the end of your turn.",
 			"stats": ["Range: 3", "Damage: 1+1", "", ""]
 		},
 		{
@@ -62,7 +56,7 @@
 			"manaCost": 1,
 			"sortingType": ["summon"],
 			"actionType": ["mine"],
-			"description": "Summon 4 mines. Escape after cast.",
+			"description": "Summon 4 mines. Use a basic attack after cast.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["P.Range: 5", "Max Mines: 12", "", ""]
@@ -200,7 +194,7 @@
 			"slotCost": 2,
 			"sortingType": ["damage"],
 			"actionType": ["aoe"],
-			"description": "Lift your marble in the air at your position and toss it at your target, creating an explosion at the first ground contact. Impact damage is doubled.",
+			"description": "Fly your marble up in the air above your position and toss it at your target, creating an explosion at the first ground contact. Impact damage is doubled.",
 			"upgradeText": "Ignore all damage while using this ability",
 			"stats": ["S.Damage: 1", "S.Range: 1", "Height: 2", ""]
 		},
@@ -337,9 +331,9 @@
 		},
 		{
 			"name": "Wing Attack",
-			"rarity": "R",
+			"rarity": "C",
 			"manaCost": 3,
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["damage"],
 			"actionType": ["slash"],
 			"description": "Fly to the target and slash.",
@@ -367,14 +361,14 @@
 		{
 			"name": "Death Ray",
 			"rarity": "L",
-			"manaCost": 7,
+			"manaCost": 8,
 			"slotCost": 2,
 			"sortingType": ["damage"],
 			"actionType": ["projectile"],
 			"description": "Shoot a penetrating projectile (can damage multiple entities but can’t penetrate walls).",
 			"downgradeText": "Takes 1 slot more",
 			"downgradeEffect": {"slots": 1},
-			"stats": ["Range: 5", "Damage: 2", "", ""]
+			"stats": ["Range: ∞", "Damage: 2", "", ""]
 		},
 		{
 			"name": "Sky Blast",
@@ -498,12 +492,11 @@
 		{
 			"name": "Heartbreaker",
 			"rarity": "R",
-			"manaCost": 2,
-			"slotCost": 1,
+			"manaCost": 4,
+			"slotCost": 2,
 			"sortingType": ["damage", "hp"],
-			"actionType": ["verge"],
-			"description": "Attack a player 3 times without changing your position or dealing damage, (can verge once). If you hit 3 times, damage the target, reduce their max mana by 1, and recover 1 HP.",
-			"stats": ["Damage: 2", "Heal: 1", "", ""]
+			"description": "Attack a player 3 times without changing your position or dealing damage. If you hit 3 times, damage the target, reduce their max mana by 1, and spawn three hp nodes around them.",
+			"stats": ["Damage: 3", "P.Range: 1", "", ""]
 		},
 		{
 			"name": "Time Leap",
@@ -565,7 +558,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "Lift your marble in the air at your position and toss it at your target. Can only damage players that are in range.",
+			"description": "Fly your marble up in the air above your position and toss it at your target. Can only damage players that are in range.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 2", "Damage: 2", "Height: 1", ""]
@@ -698,8 +691,8 @@
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
 			"actionType": ["mine"],
-			"description": "Summon a special mine and give yourself an extra action. Consecutive uses will switch your position with the mine, after which you can use an ability/basic attack.",
-			"stats": ["P.Range: 2", "Max Mines: 1", "", ""]
+			"description": "Summon a special mine and give yourself an extra action. Consecutive uses will switch your position with the mine, as well as other entities around you, after which you can use an ability/basic attack.",
+			"stats": ["P.Range: 2", "Max Mines: 1", "A.Range: 2", ""]
 		},
 		{
 			"name": "Mana Blast",
@@ -707,7 +700,7 @@
 			"manaCost": 0,
 			"slotCost": 4,
 			"sortingType": ["damage"],
-			"description": "Use up to 6 mana and damage everything in a 90° cone. Give this ability +1 damage OR +1 range level for each mana that you spend. Will always use as much mana as possible.",
+			"description": "Use up to 6 mana and damage everything in a 90° cone. Give this ability +1 damage OR +1 range level for each mana that you spend. Will always use as much mana as possible. Can't damage entities behind walls/barriers.",
 			"stats": ["Start Range: 0", "Start Damage: 0", "Max Range: 5", "Max Damage: 5"]
 		},
 		{
@@ -750,7 +743,7 @@
 			"slotCost": 1,
 			"sortingType": ["protection"],
 			"actionType": ["basic attack"],
-			"description": "After landing 4 basic attacks on players, gain a shield that will block first external damage that you take (does not charge while you have the shield).",
+			"description": "After landing 3 basic attacks on players, gain a shield that will block first external damage that you take (does not charge while you have the shield).",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -811,7 +804,8 @@
 			"sortingType": ["misc"],
 			"actionType": ["verge"],
 			"description": "You can verge twice.",
-			"upgradeText": "You can verge thrice",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -875,10 +869,10 @@
 			"rarity": "R",
 			"slotCost": 1,
 			"sortingType": ["mobility"],
-			"description": "On escape actions, teleport to any location instead of moving regularly.",
-			"downgradeText": "Takes 1 slot more",
+			"description": "On escape actions, teleport to a free location instead of moving regularly.",
+			"upgradeText": "Range: ∞",
 			"downgradeEffect": {"slots": 1},
-			"stats": ["Unstackable", "", "", ""]
+			"stats": ["Unstackable", "Range: 4", "", ""]
 		},
 		{
 			"name": "Death's Decay",
@@ -1145,7 +1139,7 @@
 			"slotCost": 2,
 			"sortingType": ["misc"],
 			"actionType": ["verge"],
-			"description": "All your physical abilities can verge.",
+			"description": "All your physical abilities can verge (once for each shot).",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1199,8 +1193,6 @@
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
 			"description": "When your marble is hit by a basic attack, blind the attacker for 1 of their turns.",
-			"downgradeText": "Takes 1 slot more",
-			"downgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1318,6 +1310,7 @@
 			"rarity": "L",
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
+			"actionType": ["mine"],
 			"description": "Your missing HP acts as additional mana storage. When healing HP points that are occupied by mana, empty that mana and summon 1 living mine per emptied mana.",
 			"stats": ["Unstackable", "P.Range: 1", "", ""]
 		},
@@ -1332,10 +1325,12 @@
 		{
 			"name": "World Splitter",
 			"rarity": "L",
-			"slotCost": 3,
+			"slotCost": 2,
 			"sortingType": ["damage", "misc"],
 			"actionType": ["void"],
 			"description": "When moving using flying actions, draw a line from your take-off position to your landing. Entities that cross these lines take 1 void damage (new lines activate at the end of your turn). Destroy all your lines when you are healed or take void damage.",
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1393,8 +1388,8 @@
 			"name": "Adrenaline",
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"actionType": ["basic attack", "verge"],
-			"description": "If your basic attack hits this turn (on any entity), repeat it on a different target ONE more time from hit position. Can verge on entities.",
+			"actionType": ["basic attack"],
+			"description": "If your basic attack hits this turn (on any entity), repeat it on a different target from hit position. Can't damage same targets twice. Repeat this until you miss or take damage.",
 			"stats": ["", "Use at Start", "", ""]
 		},
 		{
@@ -1441,7 +1436,7 @@
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
 			"description": "Stuns another player, making them unable to move during their next turn (they can still generate mana).",
-			"stats": ["Range: 3", "Free Use", "", ""]
+			"stats": ["Range: 5", "Free Use", "", ""]
 		},
 		{
 			"name": "Health Potion",
@@ -1500,7 +1495,7 @@
 			"slotCost": 1,
 			"sortingType": ["summon"],
 			"actionType": ["mine", "aoe"],
-			"description": "All players empty one mana and spawn a mine near them.",
+			"description": "All players empty one mana. Summon a mine near each affected player",
 			"stats": ["P.Range: 2", "Use at Start", "", ""]
 		},
 		{
@@ -1590,13 +1585,13 @@
 			"sortingType": ["summon", "misc"],
 			"actionType": ["mine", "aoe"],
 			"description": "Summon a special mine that will stop any player that moves into effect range from outside (A.Range: 1). Will also destroy projectiles that enter it from outside.",
-			"stats": ["P.Range: 3", "Use at Start", "Max Mines: 2", ""]
+			"stats": ["P.Range: 3", "Use at Start", "Max Mines: 3", ""]
 		},
 		{
 			"name": "Black Hole Propulsion",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Drop all on-field spawns on your marble. These entities can move your marble. They deal/take no damage until the last one stops.",
+			"description": "Drop all on-field spawns on your marble. These entities can move your marble. They deal/take no damage until the last one stops. If you hit a player during this action, take 1 damage and cancel your turn.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1611,7 +1606,7 @@
 			"slotCost": 1,
 			"sortingType": ["summon"],
 			"description": "Summon a copy of any non-player entity that is in range. Can’t exceed summon limit of that entity.",
-			"stats": ["Range: ∞", "Free Use", "", ""]
+			"stats": ["Range: 5", "Free Use", "", ""]
 		},
 		{
 			"name": "Demonic Script",
@@ -1692,6 +1687,7 @@
 			"name": "Neurotoxin",
 			"slotCost": 2,
 			"sortingType": ["misc"],
+			"actionType": ["effect"],
 			"description": "Your attack damage this turn will prevent targets from moving with escape actions until the start of your next turn.",
 			"stats": ["", "Free Use", "", ""]
 		},
@@ -1699,8 +1695,24 @@
 			"name": "Living Mine",
 			"slotCost": 1,
 			"sortingType": ["misc"],
+			"actionType": ["mine"],
 			"description": "Turn a mine into a living mine that you control.",
 			"stats": ["Range: 4", "Free Use", "", ""]
+		},
+		{
+			"name": "Tesla Mine",
+			"slotCost": 2,
+			"sortingType": ["summon", "damage"],
+			"actionType": ["mine"],
+			"description": "Summon a special mine. This mine deals 1 damage to the nearest entity with HP at the start of your every turn.",
+			"stats": ["Range: 5", "Free Use", "Max Mines: 3", ""]
+		},
+		{
+			"name": "Rewind Cassette",
+			"slotCost": 2,
+			"sortingType": ["mobility"],
+			"description": "Mark your current position. At the end of your turn, return your marble to the marked position.",
+			"stats": ["", "Free Use", "", ""]
 		}
 	],
 	
