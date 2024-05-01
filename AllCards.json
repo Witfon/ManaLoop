@@ -1709,9 +1709,9 @@
 		},
 		{
 			"name": "Rewind Cassette",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["mobility"],
-			"description": "Mark your current position. At the end of your turn, return your marble to the marked position.",
+			"description": "Mark your current position. At the end of your turn, return your marble to the marked position and optionally escape.",
 			"stats": ["", "Free Use", "", ""]
 		}
 	],
