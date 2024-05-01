@@ -1008,7 +1008,8 @@
 			"slotCost": 0,
 			"sortingType": ["misc", "mana"],
 			"description": "Your abilities only take 1 slot and are upgraded, but you can only use each one once (max 10 abilities in deck). Start the game with 3 loaded mana.",
-			"stats": ["Unstackable", "", "", ""]
+			"stats": ["Unstackable", "", "", ""],
+			"specialEffects": ["multispecialist"]
 		},
 		{
 			"name": "Durable",
@@ -1267,13 +1268,14 @@
 		},
 		{
 			"name": "Blood Pact",
-			"rarity": "L",
+			"rarity": "R",
 			"slotCost": 1,
 			"sortingType": ["hp"],
 			"description": "Doubles your max HP but you take double damage from other player attacks (does not affect damage from non-player entities and void damage).",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Unstackable", "", "", ""]
+			"stats": ["Unstackable", "", "", ""],
+			"specialEffects": ["double hp"]
 		},
 		{
 			"name": "Mana Capacitor",
