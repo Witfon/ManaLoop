@@ -5,6 +5,8 @@
 	"maxHP": 5,
 	"maxMana": 5,
 	
+	"multispecialistMaxAbilities": 10,
+	
 	"abilities":
 	[
 		{
