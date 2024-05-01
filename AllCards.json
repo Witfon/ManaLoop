@@ -710,7 +710,7 @@
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
 			"description": "Summon a point and use a basic attack. The point creates a copy of any projectile that hits it and resets the range of both. Area effects of these projectiles can't affect same target twice.",
-			"stats": ["Max Prisms: 1", "", "", ""]
+			"stats": ["P.Range: 4", "Max Prisms: 1", "", ""]
 		},
 		{
 			"name": "Polaroid Echo",
@@ -970,12 +970,11 @@
 		},
 		{
 			"name": "Elemental Resistance",
-			"rarity": "C",
+			"rarity": "R",
 			"slotCost": 1,
 			"sortingType": ["protection"],
 			"actionType": ["void"],
-			"description": "When damaged by a mine, ignore the damage and empty one mana. If you don’t have enough mana, the damage targets your HP.",
-			"upgradeText": "Also applies to void damage, takes 1 slot less",
+			"description": "When taking damage rom the void or spawns, ignore the damage and empty one mana. This also applies to damage originated from spawns (explosions, zaps etc). If you don’t have enough mana, the damage targets your HP.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1170,7 +1169,7 @@
 		},
 		{
 			"name": "Star in a Jar",
-			"rarity": "R",
+			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["protection"],
 			"actionType": ["effect"],
@@ -1317,9 +1316,11 @@
 		{
 			"name": "Sniper Scope",
 			"rarity": "R",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"description": "Extends the range of your projectile attacks by Range 1.",
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
 			"stats": ["Stackable", "", "", ""]
 		},
 		{
