@@ -1479,8 +1479,8 @@
 			"slotCost": 1,
 			"sortingType": ["damage"],
 			"actionType": ["projectile"],
-			"description": "A projectile that can bounce from one non-wall entity once, resetting its range. Can escape after cast.",
-			"stats": ["Spread Range: 2", "Uses Turn", "Damage: 1", ""]
+			"description": "A projectile that can bounce from a spawn once, resetting its range.",
+			"stats": ["Jump Range: 2", "Use at Start", "Damage: 1", ""]
 		},
 		{
 			"name": "Tesseract Mine",
