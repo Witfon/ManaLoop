@@ -1003,7 +1003,7 @@
 			"rarity": "L",
 			"slotCost": 0,
 			"sortingType": ["misc", "mana"],
-			"description": "Your abilities only take 1 slot and are upgraded, but you can only use each one once (max 10 abilities in deck). Start the game with 3 loaded mana.",
+			"description": "All your abilities take no more than 1 slot and are upgraded, but you can only use each one once (max 10 abilities in deck). Start the game with 3 loaded mana.",
 			"stats": ["Unstackable", "", "", ""],
 			"specialEffects": ["multispecialist"]
 		},
