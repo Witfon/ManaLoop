@@ -1378,7 +1378,6 @@
 			"rarity": "L",
 			"slotCost": 2,
 			"sortingType": ["misc"],
-			"description": "",
 			"stats": ["Unstackable", "", "", ""]
 		}
 	],
