@@ -1373,7 +1373,7 @@
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
-			"name": "Typewriter at the End of Time"
+			"name": "Typewriter at the End of Time",
 			"description": "When a player uses an ability or item card, save the first and last letter of its name to this card. You can use these letters to try to spell a card name during your turns (can repeat same unlocked letters). When you have enough letters unlocked to spell a name of a card (without spaces or special characters), you gain that card for 0 slot cost and with all upgrades. Discard the used letters from this card.",
 			"rarity": "L",
 			"slotCost": 2,
