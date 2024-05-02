@@ -709,7 +709,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
-			"description": "Summon a point and use a basic attack. The point creates a copy of any projectile that hits it and resets the range of both. Area effects of these projectiles can't affect same target twice.",
+			"description": "Summon a point and use a basic attack. The point creates a copy of any projectile that hits it and resets the range of both. These projectiles can't have the same entity as their next target. Area effects of these projectiles can't affect same target twice.",
 			"stats": ["P.Range: 4", "Max Prisms: 1", "", ""]
 		},
 		{
