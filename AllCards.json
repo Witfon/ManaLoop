@@ -700,7 +700,7 @@
 			"manaCost": 0,
 			"slotCost": 4,
 			"sortingType": ["damage"],
-			"description": "Use up to 6 mana and damage everything in a 90° cone. Give this ability +1 damage OR +1 range level for each mana that you spend. Will always use as much mana as possible. Can't damage entities behind walls/barriers.",
+			"description": "Use up to 6 mana and damage everything in a 90° cone (area spread can't penetrate walls). Give this ability +1 damage OR +1 range level for each mana that you spend. Will always use as much mana as possible.",
 			"stats": ["Start Range: 0", "Start Damage: 0", "Max Range: 5", "Max Damage: 5"]
 		},
 		{
@@ -1390,7 +1390,7 @@
 			"slotCost": 1,
 			"sortingType": ["damage"],
 			"actionType": ["basic attack"],
-			"description": "If your basic attack hits this turn (on any entity), repeat it on a different target from hit position. Can't damage same targets twice. Repeat this until you miss or take damage.",
+			"description": "If your basic attack hits this turn (on any entity), repeat it on a different target from hit position. Can't damage same targets twice. Repeat this until you miss or escape.",
 			"stats": ["", "Use at Start", "", ""]
 		},
 		{
@@ -1399,21 +1399,21 @@
 			"sortingType": ["summon"],
 			"actionType": ["mine"],
 			"description": "Dispense all your mana in form of mines.",
-			"stats": ["P.Range: 3", "Use at Start", "", ""]
+			"stats": ["P.Range: 5", "Use at Start", "", ""]
 		},
 		{
 			"name": "Nullification Script",
 			"slotCost": 1,
 			"sortingType": ["misc", "summon"],
-			"description": "Deal 1 damage to all non-player entities in range.",
+			"description": "Deal 1 damage to all non-player entities in range. This damage counts as impact damage.",
 			"stats": ["Range: 4", "Free Use", "", ""]
 		},
 		{
 			"name": "Grappling Hook",
 			"slotCost": 1,
 			"sortingType": ["mobility"],
-			"description": "Move in the direction of a wall/barrier that is in range.",
-			"stats": ["Range: 5", "Free Use", "Move Dist: 1", ""]
+			"description": "Move in any direction.",
+			"stats": ["Distance: 1", "Free Use", "", ""]
 		},
 		{
 			"name": "Minewarp",
@@ -1504,7 +1504,7 @@
 			"slotCost": 1,
 			"sortingType": ["summon"],
 			"description": "Summon a fragile barrier. This barrier breaks when damaged.",
-			"stats": ["P.Range: 1", "Free Use", "Width: 1", ""]
+			"stats": ["P.Range: 5", "Free Use", "Width: 1", ""]
 		},
 		{
 			"name": "Betrayal",
@@ -1512,7 +1512,7 @@
 			"sortingType": ["damage", "mana"],
 			"actionType": ["team"],
 			"description": "Choose to deal 1-5 damage to an allied player. If the ally dies, recover mana negatively proportionate to the damage dealt (5 damage = 1 mana, 3 damage = 3 mana, 1 damage = 5 mana).",
-			"stats": ["Range: ∞", "Free Use", "", ""]
+			"stats": ["Range: ∞", "Use at Start", "", ""]
 		},
 		{
 			"name": "Shift",
@@ -1533,8 +1533,8 @@
 			"name": "Impulse Script",
 			"slotCost": 1,
 			"sortingType": ["mobility"],
-			"description": "Teleport an entity away from your position (can’t teleport into the void).",
-			"stats": ["Range: 4", "Free Use", "Distance: 3", ""]
+			"description": "Teleport select entities away from your position (can’t teleport into the void).",
+			"stats": ["Range: ∞", "Free Use", "Distance: 3", ""]
 		},
 		{
 			"name": "Cursed Touch",
@@ -1548,15 +1548,15 @@
 			"name": "Smiting Touch",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"description": "Damaging a player with contact damage this turn will cause them to discard all their items and allow you to take one of them. Triggers once.",
+			"description": "Damaging a player with contact damage this turn will cause them to discard up to 5 items and allow you to take two of them if you have slots available. Triggers once.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Freezing Touch",
 			"slotCost": 1,
-			"sortingType": ["misc"],
-			"description": "Damaging a player with contact damage this turn will make them unable to gain mana. Effect lasts until they take next damage. Triggers once.",
-			"stats": ["", "Free Use", "", ""]
+			"sortingType": ["misc", "spawn"],
+			"description": "Damaging a player with contact damage this turn will make them empty all their current mana in form of mana nodes and unable to gain mana. Effect lasts until they take any form of damage. Triggers once.",
+			"stats": ["P.Range: 1", "Free Use", "", ""]
 		},
 		{
 			"name": "Decaying Touch",
@@ -1578,15 +1578,15 @@
 			"sortingType": ["damage", "summon"],
 			"actionType": ["mine", "aoe"],
 			"description": "Pick a mine. Destroy the mine and deal 1 damage to everything around it.",
-			"stats": ["Range: 3", "Uses Turn", "S.Range: 2", ""]
+			"stats": ["Range: 3", "Basic Turn", "S.Range: 2", ""]
 		},
 		{
 			"name": "Force Field",
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
 			"actionType": ["mine", "aoe"],
-			"description": "Summon a special mine that will stop any player that moves into effect range from outside (A.Range: 1). Will also destroy projectiles that enter it from outside.",
-			"stats": ["P.Range: 3", "Use at Start", "Max Mines: 3", ""]
+			"description": "Summon a special mine (P.Range: 3) that will stop any player that moves into effect range from outside. Will also destroy projectiles that enter it from outside. Does not affect flying entities.",
+			"stats": ["A.Range: 1", "Use at Start", "Max Mines: 3", ""]
 		},
 		{
 			"name": "Black Hole Propulsion",
@@ -1627,9 +1627,8 @@
 		{
 			"name": "Potency Spike",
 			"slotCost": 1,
-			"sortingType": ["damage", "summon"],
-			"actionType": ["mine"],
-			"description": "Enrich a mine, doubling its contact damage.",
+			"sortingType": ["damage", "misc", "summon"],
+			"description": "Choose one: 1: double a spawn's contact damage. 2: Increase a spawn's effect area by 1 Range level. This card can't be used on the same spawn twice.",
 			"stats": ["Range: ∞", "Free Use", "", ""]
 		},
 		{
