@@ -1018,7 +1018,7 @@
 		},
 		{
 			"name": "Eagle Eye",
-			"rarity": "L",
+			"rarity": "R",
 			"slotCost": 2,
 			"sortingType": ["misc"],
 			"actionType": ["verge", "basic attack"],
@@ -1134,7 +1134,7 @@
 		},
 		{
 			"name": "Second Breath",
-			"rarity": "L",
+			"rarity": "R",
 			"slotCost": 2,
 			"sortingType": ["misc"],
 			"actionType": ["verge"],
