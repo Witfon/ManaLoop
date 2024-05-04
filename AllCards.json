@@ -869,7 +869,6 @@
 			"sortingType": ["mobility"],
 			"description": "On escape actions, teleport to a free location instead of moving regularly.",
 			"upgradeText": "Range: ∞",
-			"downgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "Range: 4", "", ""]
 		},
 		{
