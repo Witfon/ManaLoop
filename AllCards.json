@@ -112,6 +112,8 @@
 			"slotCost": 1,
 			"sortingType": ["damage"],
 			"description": "Drag your marble back from your intended attack direction (Range: 2) and then attack.",
+			"upgradeText": "Costs 1 less",
+			"upgradeEffect": {"manaCost": 1},
 			"stats": ["Range: ∞", "Damage: 2", "No Cooldown", ""]
 		},
 		{
@@ -280,7 +282,7 @@
 			"name": "Possession",
 			"rarity": "R",
 			"manaCost": 1,
-			"slotCost": 1,
+			"slotCost": 2,
 			"sortingType": ["damage", "misc"],
 			"description": "Attack with another entity. This attack has the damage and effect of the entity. If the entity has no contact damage, the attack won't deal damage.",
 			"upgradeText": "Range: 4",
@@ -307,7 +309,7 @@
 			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a spawn (can verge). If you hit, repeat this action (until you miss or reach max mana). Recover 1 mana for each destroyed spawn.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Damage: 1", "No Cooldown", "", ""]
+			"stats": ["Damage: 1", "", "", ""]
 		},
 		{
 			"name": "Convert",
@@ -429,7 +431,7 @@
 		{
 			"name": "Mana Storm",
 			"rarity": "R",
-			"manaCost": 4,
+			"manaCost": 3,
 			"slotCost": 2,
 			"sortingType": ["mana", "summon"],
 			"description": "Turn all spawns into mana nodes. Use a basic attack after cast.",
@@ -502,11 +504,9 @@
 			"name": "Time Leap",
 			"rarity": "R",
 			"manaCost": 1,
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["mobility"],
 			"description": "Summon a point near your position. Consecutive uses will teleport you to the point. Use an ability/basic attack after cast.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
 			"stats": ["Tp.Range: 4", "Summon Range: 2", "", ""]
 		},
 		{
@@ -581,8 +581,6 @@
 			"sortingType": ["damage", "misc"],
 			"actionType": ["effect"],
 			"description": "Attack a target. The target will take 1 extra soft damage on your next turn. Players that die from this ability won't trigger their on-death effects.",
-			"downgradeText": "Takes 1 slot more",
-			"downgradeEffect": {"slots": 1},
 			"stats": ["Damage: 1+1", "Effect", "", ""]
 		},
 		{
@@ -601,8 +599,8 @@
 			"slotCost": 1,
 			"sortingType": ["mobility"],
 			"description": "All entities are moved to the closest wall or barrier. Use a basic attack after cast.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
+			"upgradeText": "Costs 1 less",
+			"upgradeEffect": {"manaCost": 1},
 			"stats": ["Range: ∞", "", "", ""]
 		},
 		{
@@ -709,7 +707,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
-			"description": "Summon a point and use a basic attack. The point creates a copy of any projectile that hits it and resets the range of both. These projectiles can't have the same entity as their next target. Area effects of these projectiles can't affect same target twice.",
+			"description": "Summon a point and use a basic attack. The point creates a copy of any projectile that hits it and resets the range of both. These projectiles can't have the same entity as their next target. Area effects of these projectiles can't affect same target twice. These projectiles hit their final target(s) simultaneously.",
 			"stats": ["P.Range: 4", "Max Prisms: 1", "", ""]
 		},
 		{
@@ -1094,13 +1092,11 @@
 		},
 		{
 			"name": "Ichor",
-			"rarity": "R",
-			"slotCost": 2,
+			"rarity": "C",
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
 			"description": "After damaging a player with a basic attack, the next non-player damage that they take will be doubled. Debuff clears after triggering.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1129,7 +1125,7 @@
 			"slotCost": 1,
 			"sortingType": ["misc", "protection"],
 			"actionType": ["void", "mine"],
-			"description": "Your mines deal void damage (their damage no longer counts as non-player entity damage). You can’t take lethal void damage.",
+			"description": "Your mines contact damage is converted into void damage (their damage no longer counts as non-player entity damage). You can’t take lethal void damage.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1311,6 +1307,8 @@
 			"sortingType": ["mana", "summon"],
 			"actionType": ["mine"],
 			"description": "Your missing HP acts as additional mana storage. When healing HP points that are occupied by mana, empty that mana and summon 1 living mine per emptied mana.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "P.Range: 1", "", ""]
 		},
 		{
@@ -1657,10 +1655,10 @@
 		},
 		{
 			"name": "Pocket Clover",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"description": "If you missed an attack this turn, redo it once. Effect wears out after triggering.",
-			"stats": ["", "Free Use", "", ""]
+			"stats": ["", "Use at Start", "", ""]
 		},
 		{
 			"name": "Pocket Mines",
