@@ -850,7 +850,7 @@
 			"rarity": "R",
 			"slotCost": 1,
 			"sortingType": ["protection"],
-			"description": "You can’t take lethal damage from enemy abilities (you will have 1 hp left). Can’t be combined with Durable and Spiked.",
+			"description": "You can’t take lethal damage from enemy abilities. Can’t be combined with Durable and Spiked.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1009,7 +1009,7 @@
 			"rarity": "R",
 			"slotCost": 3,
 			"sortingType": ["protection"],
-			"description": "Your marble can’t take lethal damage from basic attacks (you will have 1 HP left). Can’t stack with Spellproof.",
+			"description": "Your marble can’t take lethal damage from basic attacks. Can’t stack with Spellproof.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
@@ -1295,9 +1295,9 @@
 		{
 			"name": "Astral Body",
 			"rarity": "L",
-			"slotCost": 2,
+			"slotCost": 3,
 			"sortingType": ["protection"],
-			"description": "Set your max HP to 1 at start (can’t have any HP-decreasing passives). Ignore ability damage that you take from enemies, but empty mana equal to the damage that you would receive. If you don’t have enough mana, the damage targets your HP.",
+			"description": "Damage from enemy abilities will empty your mana equal to damage dealt instead of targeting your HP. If you don't have enough mana, the damage targets your HP and reduces. You don't gain mana when taking damage from basic attacks.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1426,7 +1426,7 @@
 			"slotCost": 2,
 			"sortingType": ["mobility", "summon"],
 			"actionType": ["verge"],
-			"description": "If you hit a spawn this turn, you can teleport to another spawn and reset your attack range (ignore damage from this spawn). The used spawns will be destroyed. You can verge on spawns this turn.",
+			"description": "If you hit a spawn this turn, you can teleport to another spawn and reset your attack range (this effect triggers once). The used spawns will be destroyed. You can verge on spawns and ignore damage from them this turn.",
 			"stats": ["Range: ∞", "Free Use", "", ""]
 		},
 		{
@@ -1612,7 +1612,7 @@
 			"name": "Duplicate",
 			"slotCost": 1,
 			"sortingType": ["summon"],
-			"description": "Summon a copy of any non-player entity that is in range. Can’t exceed summon limit of that entity.",
+			"description": "Summon a copy of any non-player entity that is in range (retains entity ownership). Can’t exceed summon limit of that entity.",
 			"stats": ["Range: 5", "Free Use", "", ""]
 		},
 		{
