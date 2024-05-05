@@ -432,7 +432,7 @@
 			"manaCost": 3,
 			"slotCost": 2,
 			"sortingType": ["mana", "summon"],
-			"description": "Turn all spawns into mana nodes and give yourself an extra action.",
+			"description": "Turn all spawns into living mana nodes and give yourself an extra action.",
 			"upgradeText": "Costs 1 less",
 			"upgradeEffect": {"manaCost": 1},
 			"stats": ["Range: 4", "", "", ""]
@@ -888,7 +888,7 @@
 			"slotCost": 2,
 			"sortingType": ["hp"],
 			"actionType": ["basic attack"],
-			"description": "Recover 1 HP to yourself after landing a basic attack on a player. Your basic attacks deal no damage (will still trigger escape, turn skip, and mana recovery).",
+			"description": "Recover 1 HP to yourself after landing a basic attack on a player. Your basic attacks deal no damage (will still trigger escape and mana recovery).",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1425,7 +1425,7 @@
 			"slotCost": 1,
 			"sortingType": ["summon", "hp"],
 			"actionType": ["mine"],
-			"description": "Summon a special mine. Heal 1 HP when a player is damaged by this mine.",
+			"description": "Summon a vampiric mine.",
 			"stats": ["P.Range: 3", "Use at Start", "Max mines: 9", ""]
 		},
 		{
