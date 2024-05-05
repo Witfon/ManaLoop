@@ -923,7 +923,7 @@
 			"description": "Start the game with 3 charged mana.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Unstackable", "", "", ""],
+			"stats": ["Unstackable", "", "", ""]
 		},
 		{
 			"name": "Magic Shield",
