@@ -648,7 +648,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Move all movable non-player entities. Can escape after cast.",
+			"description": "Move all non-player entities that belong to you. Can escape after cast.",
 			"stats": ["Range: ∞", "", "", ""]
 		},
 		{
@@ -918,13 +918,12 @@
 		{
 			"name": "Loaded Up",
 			"rarity": "C",
-			"slotCost": 1,
+			"slotCost": 2,
 			"sortingType": ["mana"],
-			"description": "Start the game with 5 charged mana.",
-			"downgradeText": "Takes 1 slot more",
-			"downgradeEffect": {"slots": 1},
+			"description": "Start the game with 3 charged mana.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""],
-			"disabled": true
 		},
 		{
 			"name": "Magic Shield",
@@ -1270,7 +1269,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["mana"],
-			"description": "This card gains 1 charge whenever you cast an ability (on finish). On 2 charges, discharge and recover 1 mana.",
+			"description": "This card gains 1 charge whenever you cast an ability that spends at least 1 mana (on finish). On 2 charges, discharge and recover 1 mana.",
 			"stats": ["Stackable", "", "", ""]
 		},
 		{
@@ -1587,11 +1586,11 @@
 		},
 		{
 			"name": "Force Field",
-			"slotCost": 1,
+			"slotCost": 2,
 			"sortingType": ["summon", "misc"],
 			"actionType": ["mine", "aoe"],
 			"description": "Summon a special mine (P.Range: 3) that will stop any player that moves into effect range from outside. Will also destroy projectiles that enter it from outside. Does not affect flying entities.",
-			"stats": ["A.Range: 1", "Use at Start", "Max Mines: 3", ""]
+			"stats": ["A.Range: 1", "Use at Start", "Max Mines: 1", ""]
 		},
 		{
 			"name": "Black Hole Propulsion",
