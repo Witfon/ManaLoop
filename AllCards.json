@@ -16,8 +16,8 @@
 			"manaCost": 5,
 			"sortingType": ["damage"],
 			"actionType": ["projectile"],
-			"description": "Shoot an explosive piercing projectile and disable effects of all spawns until this attack ends. All other non-barrier entities that come in contact with its effect area will be attached to it. Explodes after touching a wall/barrier.",
-			"stats": ["Range: ∞", "Damage: 1", "A.Range: 2", "Final Explosion S.Range: 2"]
+			"description": "Shoot an explosive piercing projectile and disable special effects of all spawns until this attack ends. All other non-barrier entities that come in contact with its effect area will be attached to it. Explodes after touching a wall/barrier, allowing you to attack with all attached entities that survived the explosion.",
+			"stats": ["Range: ∞", "Damage: 1", "A.Range: 1", "Final Explosion S.Range: 2"]
 		},
 		{
 			"name": "360 No-Scope",
