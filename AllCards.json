@@ -430,7 +430,7 @@
 			"name": "Mana Storm",
 			"rarity": "R",
 			"manaCost": 3,
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
 			"description": "Turn all spawns into living mana nodes and give yourself an extra action.",
 			"upgradeText": "Costs 1 less",
