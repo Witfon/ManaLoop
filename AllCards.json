@@ -429,12 +429,10 @@
 		{
 			"name": "Mana Storm",
 			"rarity": "R",
-			"manaCost": 3,
+			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
-			"description": "Turn all spawns into living mana nodes and give yourself an extra action.",
-			"upgradeText": "Costs 1 less",
-			"upgradeEffect": {"manaCost": 1},
+			"description": "Give all spawns living and mana attributes and become the owner of these spawns. Give yourself an extra action.",
 			"stats": ["Range: 4", "", "", ""]
 		},
 		{
