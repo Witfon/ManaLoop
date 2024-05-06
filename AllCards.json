@@ -1262,7 +1262,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["mana"],
-			"description": "This card gains 1 charge whenever you cast an ability that spends at least 1 mana (on finish). On 2 charges, discharge and recover 1 mana.",
+			"description": "This card gains 1 charge whenever you cast an ability that spends at least 1 mana. On 3 charges, discharge and recover 1 mana.",
 			"stats": ["Stackable", "", "", ""]
 		},
 		{
