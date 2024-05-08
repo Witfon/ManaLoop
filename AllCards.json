@@ -7,8 +7,12 @@
 	
 	"multispecialistMaxAbilities": 10,
 	
-	"abilities":
+	"allCardGroups":
 	[
+	{
+		"name": "Ability",
+		"cards":
+		[
 		{
 			"name": "Magnetic Blast",
 			"rarity": "L",
@@ -711,12 +715,15 @@
 			"description": "Use the effect of your last used item. This does not count as item use. Costs 1 more for each copied items' slot cost. Give yourself an extra action if the item is 'Free Use' or 'Use at Start'.",
 			"stats": ["", "", "", ""]
 		}
-	],
+		]
+	},
 	
 	
 	
-	"passives":
-	[
+	{
+		"name": "Passive",
+		"cards":
+		[
 		{
 			"name": "Berserker",
 			"rarity": "L",
@@ -1367,12 +1374,15 @@
 			"sortingType": ["misc"],
 			"stats": ["Unstackable", "", "", ""]
 		}
-	],
+		]
+	},
 	
 	
 	
-	"items":
-	[
+	{
+		"name": "Item",
+		"cards":
+		[
 		{
 			"name": "Lasso",
 			"slotCost": 1,
@@ -1709,48 +1719,54 @@
 			"description": "Mark your current position. At the end of your turn, return your marble to the marked position and optionally escape.",
 			"stats": ["", "Free Use", "", ""]
 		}
-	],
+		]
+	},
 	
 	
 	
-	"upgrades":
-	[
 	{
+		"name": "Upgrade",
+		"cards":
+		[
+		{
 		"name": "UPGRADE Ability",
 		"slotCost": 1,
 		"description": "Upgrades 3 upgradable abilities.",
 		"upgradeLimit": 3,
 		"restrictedToDeck": "Ability",
 		"stats": ["Unstackable", "", "", ""]
-	},
-	{
-		"name": "UPGRADE Passive",
-		"slotCost": 1,
-		"description": "Upgrades 3 upgradable passives.",
-		"upgradeLimit": 3,
-		"restrictedToDeck": "Passive",
-		"stats": ["Unstackable", "", "", ""]
-	},
-	{
-		"name": "Tinkerer",
-		"slotCost": 0,
-		"itemSlots": 3,
-		"description": "Your upgrade card can upgrade twice as many cards, but reduces your max item slots by 3. You can only equip this card in one deck.",
-		"stats": ["Unstackable", "", "", ""]
-	},
-	{
-		"name": "Overdrive",
-		"slotCost": -1,
-		"hp": -2,
-		"description": "Gives you 1 extra deck slot, but reduces your max HP by 2.",
-		"stats": ["Stackable", "", "", ""]
-	},
-	{
-		"name": "Overgrowth",
-		"slotCost": -1,
-		"mana": -3,
-		"description": "Gives you 1 extra deck slot, but reduces your max mana by 3.",
-		"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "UPGRADE Passive",
+			"slotCost": 1,
+			"description": "Upgrades 3 upgradable passives.",
+			"upgradeLimit": 3,
+			"restrictedToDeck": "Passive",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Tinkerer",
+			"slotCost": 0,
+			"itemSlots": 3,
+			"description": "Your upgrade card can upgrade twice as many cards, but reduces your max item slots by 3. You can only equip this card in one deck.",
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Overdrive",
+			"slotCost": -1,
+			"hp": -2,
+			"description": "Gives you 1 extra deck slot, but reduces your max HP by 2.",
+			"stats": ["Stackable", "", "", ""]
+		},
+		{
+			"name": "Overgrowth",
+			"slotCost": -1,
+			"mana": -3,
+			"description": "Gives you 1 extra deck slot, but reduces your max mana by 3.",
+			"stats": ["Stackable", "", "", ""]
+		}
+		]
 	}
 	]
+
 }
