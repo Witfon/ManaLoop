@@ -179,7 +179,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["summon"],
-			"description": "Summon an indestructible node. Players that hit the node will be stopped in place, allowing them to reset the range of their current attack. Use a basic attack after cast.",
+			"description": "Summon an immune sticky node. Use a basic attack after cast.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 4", "Max Shrooms: 5", "", ""]
@@ -607,7 +607,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Summon a point and give yourself an extra action. When a second point is summoned, they get linked. Hiting the effect area of one teleport you to the other one, from which you can reset your attack range (max 1 tp per turn, also works for your projectiles). Only players with this card can use the portals.",
+			"description": "Summon an immune node and give yourself an extra action. When a second node is summoned, they get linked. Hiting the effect area of one teleport you to the other one, from which you can reset your attack range (max 1 tp per turn, also works for your projectiles). Only players with this card can use the portals.",
 			"stats": ["P.Range: 4", "A.Range: 1", "Max portal pairs: 1", ""]
 		},
 		{
@@ -705,7 +705,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
-			"description": "Summon a point and use a basic attack. The point creates a copy of any projectile that hits it and resets the range of both. These projectiles can't have the same entity as their next target. Area effects of these projectiles can't affect same target twice. These projectiles hit their final target(s) simultaneously.",
+			"description": "Summon an immune node and use a basic attack. The node creates a copy of any projectile that hits it and resets the range of both. These projectiles can't have the same entity as their next target. Area effects of these projectiles can't affect same target twice. These projectiles hit their final target(s) simultaneously.",
 			"stats": ["P.Range: 4", "Max Prisms: 1", "", ""]
 		},
 		{
@@ -1009,7 +1009,7 @@
 			"slotCost": 1,
 			"sortingType": ["protection"],
 			"actionType": ["void"],
-			"description": "When taking damage from void or spawns, ignore the damage and empty one mana for each point of damage. This also applies to damage originated from spawns (explosions, zaps etc). If you don’t have enough mana, the damage targets your HP.",
+			"description": "When taking damage from void or spawns, ignore the damage and empty one mana for each unit of damage. This also applies to damage originated from spawns (explosions, zaps etc). If you don’t have enough mana, the damage targets your HP.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1342,7 +1342,7 @@
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
 			"actionType": ["mine"],
-			"description": "Your missing HP acts as additional mana storage. When healing HP points that are occupied by mana, empty that mana and summon 1 living mine per emptied mana.",
+			"description": "Your missing HP acts as additional mana storage. When healing HP units that are occupied by mana, empty that mana and summon 1 living mine per emptied mana.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "P.Range: 1", "", ""]
