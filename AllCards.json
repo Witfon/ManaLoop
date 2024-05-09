@@ -1721,7 +1721,7 @@
 			"slotCost": 1,
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
-			"description": "Remove all temporary negative effects from you (blind, ichor, venom etc.). Can be used in the middle of other abilities.",
+			"description": "Remove all temporary negative effects from you (blind, ichor, venom etc.). Ignore void damage until the end of your turn.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1762,10 +1762,10 @@
 		},
 		{
 			"name": "Neurotoxin",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"actionType": ["effect"],
-			"description": "Your attack damage this turn will prevent targets from moving with escape actions until the start of your next turn.",
+			"description": "Your attack damage this turn will prevent damaged targets from moving until the start of your next turn.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
