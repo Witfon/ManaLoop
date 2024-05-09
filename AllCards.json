@@ -727,7 +727,7 @@
 		{
 			"name": "Rasengan",
 			"rarity": "R",
-			"manaCost": 5,
+			"manaCost": 4,
 			"slotCost": 1,
 			"sortingType": ["damage", "summon"],
 			"description": "Summon an immune marble and attack with it. Attack ends once the marble stops. The marble remains on the field when attack ends, keeping its contact damage from this attack. Can hit multiple targets.",
