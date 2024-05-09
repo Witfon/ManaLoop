@@ -358,8 +358,8 @@
 			"rarity": "R",
 			"manaCost": 4,
 			"slotCost": 1,
-			"sortingType": ["damage", "verge"],
-			"description": "Summon 2 clones of yourself and attack with them and your marble. These clones have 1 HP and die at the end of your turn. Your marble attack can verge.",
+			"sortingType": ["damage", "summon"],
+			"description": "Summon 2 clones with 1 HP and attack with them and your marble. Your real marble attack can verge. Clones vanish at the end of your turn.",
 			"stats": ["Damage: 1-3", "P.Range: 1", "", ""]
 		},
 		{
@@ -714,6 +714,42 @@
 			"sortingType": ["misc"],
 			"description": "Use the effect of your last used item. This does not count as item use. Costs 1 more for each copied items' slot cost. Give yourself an extra action if the item is 'Free Use' or 'Use at Start'.",
 			"stats": ["", "", "", ""]
+		},
+		{
+			"name": "Death Angel's Touch",
+			"rarity": "C",
+			"manaCost": 5,
+			"slotCost": 1,
+			"sortingType": ["damage"],
+			"description": "Attack. Take 1 damage and end your turn if you hit a spawn.",
+			"stats": ["Damage: 3", "", "", ""]
+		},
+		{
+			"name": "Rasengan",
+			"rarity": "R",
+			"manaCost": 5,
+			"slotCost": 1,
+			"sortingType": ["damage, summon"],
+			"description": "Summon an immune marble and attack with it. Attack ends once the marble stops. The marble remains on the field when attack ends, keeping its contact damage from this attack. Can hit multiple targets.",
+			"stats": ["Damage: 2", "Max Rasengans: 3", "", ""]
+		},
+		{
+			"name": "Distraction Jutsu",
+			"rarity": "R",
+			"manaCost": 2,
+			"slotCost": 1,
+			"sortingType": ["damage, summon"],
+			"description": "Summon 7 clones with 1 HP and attack with them. These clones can't deal damage. Clones vanish at the end of your turn. Get an extra action after cast.",
+			"stats": ["P.Range: 1", "", "", ""]
+		},
+		{
+			"name": "Shadow Clone",
+			"rarity": "R",
+			"manaCost": 4,
+			"slotCost": 2,
+			"sortingType": ["damage, summon"],
+			"description": "Summon a clone of your marble and gain an extra action. You can attack with this clone up to 3 times this turn (these don't count as actions). The clone vanishes at the end of your turn.",
+			"stats": ["P.Range: 1", "Clone Damage: 1", "", ""]
 		}
 		]
 	},
@@ -858,8 +894,10 @@
 			"slotCost": 1,
 			"sortingType": ["summon"],
 			"actionType": ["mine"],
-			"description": "Summon a living mine for each point of damage that you take. These living mines can't move on your next turn.",
-			"stats": ["Unstackable", "P.Range: 1", "", ""]
+			"description": "Summon a living mine when your marble stops after taking damage. These newly spawned living mines can't move on your next turn.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Stackable", "P.Range: 1", "", ""]
 		},
 		{
 			"name": "Escape Master",
@@ -1324,8 +1362,6 @@
 			"sortingType": ["damage", "misc"],
 			"actionType": ["void"],
 			"description": "When moving using flying actions, draw a line from your take-off position to your landing. Entities that cross these lines take 1 void damage (new lines activate at the end of your turn). Destroy all your lines when you are healed or take void damage.",
-			"downgradeText": "Takes 1 slot more",
-			"downgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1373,6 +1409,42 @@
 			"slotCost": 2,
 			"sortingType": ["misc"],
 			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Chakra Passthrough",
+			"description": "You don't gain mana when you take damage. Spawn 2 mana nodes when you would gain mana for taking damage during opponent turns.",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["mana", "summon"],
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Spirit Rush",
+			"description": "Gain 1 mana when you verge.",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["mana"],
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Shadow Dive",
+			"description": "You can't take damage from basic attacks that are launched within Range 1 of you.",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["protection"],
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "", "", ""]
+		},
+		{
+			"name": "Guardian Mine",
+			"description": "Summon a special mine at the start of the game. This mine teleports next to you at the end of your every turn.",
+			"rarity": "C",
+			"slotCost": 1,
+			"sortingType": ["summon", "protection"],
+			"stats": ["Stackable", "P.Range: 1", "", ""]
 		}
 		]
 	},
