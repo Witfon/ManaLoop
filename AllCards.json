@@ -729,7 +729,7 @@
 			"rarity": "R",
 			"manaCost": 5,
 			"slotCost": 1,
-			"sortingType": ["damage, summon"],
+			"sortingType": ["damage", "summon"],
 			"description": "Summon an immune marble and attack with it. Attack ends once the marble stops. The marble remains on the field when attack ends, keeping its contact damage from this attack. Can hit multiple targets.",
 			"stats": ["Damage: 2", "Max Rasengans: 3", "", ""]
 		},
@@ -738,7 +738,7 @@
 			"rarity": "R",
 			"manaCost": 2,
 			"slotCost": 1,
-			"sortingType": ["damage, summon"],
+			"sortingType": ["damage", "summon"],
 			"description": "Summon 7 clones with 1 HP and attack with them. These clones can't deal damage. Clones vanish at the end of your turn. Get an extra action after cast.",
 			"stats": ["P.Range: 1", "", "", ""]
 		},
@@ -747,7 +747,7 @@
 			"rarity": "R",
 			"manaCost": 4,
 			"slotCost": 2,
-			"sortingType": ["damage, summon"],
+			"sortingType": ["damage", "summon"],
 			"description": "Summon a clone of your marble and gain an extra action. You can attack with this clone up to 3 times this turn (these don't count as actions). The clone vanishes at the end of your turn.",
 			"stats": ["P.Range: 1", "Clone Damage: 1", "", ""]
 		}
