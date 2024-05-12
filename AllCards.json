@@ -35,9 +35,11 @@
 			"name": "Star Storm",
 			"rarity": "L",
 			"slotCost": 2,
-			"manaCost": 4,
+			"manaCost": 3,
 			"sortingType": ["damage"],
-			"description": "Deal soft damage to all players, including yourself.",
+			"description": "Deal soft damage to all players, including yourself. Costs 1 more mana for each other living player.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Damage: 1", "Range: ∞", "", ""]
 		},
 		{
@@ -66,10 +68,8 @@
 			"slotCost": 2,
 			"manaCost": 4,
 			"sortingType": ["hp"],
-			"description": "Sacrifice 1 HP and bring back 1 player from the dead with 1 HP.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
-			"stats": ["Sacrifice: 1", "", "", ""]
+			"description": "Sacrifice up to your entire HP pool and resurrect a dead ally with that amount of HP. Discard this card after cast.",
+			"stats": ["Min Sacrifice: 1", "", "", ""]
 		},
 		{
 			"name": "Aura Pulse",
@@ -224,7 +224,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "Attack an enemy with your eyes closed. Can escape after cast.",
+			"description": "Basic attack an enemy with your eyes closed. Can escape after cast.",
 			"stats": ["Damage: 2", "", "", ""]
 		},
 		{
@@ -252,7 +252,7 @@
 			"manaCost": 4,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "An attack that deals splash damage around its trail. Take 1 damage if you land a physical hit on a spawn or a player while performing this attack. The hit entity takes 1 additional damage.",
+			"description": "An attack that deals splash damage around its trail. Take 1 self-damage if you land a physical hit on a spawn or a player while performing this attack. The hit entity takes 1 additional damage.",
 			"stats": ["S.Range: 1", "Damage: 1", "S.Damage: 1", ""]
 		},
 		{
@@ -271,7 +271,7 @@
 			"manaCost": 2,
 			"slotCost": 2,
 			"sortingType": ["damage", "misc"],
-			"description": "Attack with another entity. This attack has the damage and effect of the entity. If the entity has no contact damage, the attack won't deal damage.",
+			"description": "Attack with a movable non-player entity. This attack has the damage and effect of the entity. If the entity has no contact damage, the attack won't deal damage.",
 			"upgradeText": "Range: 4",
 			"stats": ["Range: 3", "", "", ""]
 		},
@@ -291,7 +291,7 @@
 			"manaCost": 0,
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
-			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a spawn (can verge). If you hit, repeat this action (until you miss or reach max mana). Recover 1 mana for each destroyed spawn.",
+			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a spawn. If you hit, repeat this action from hit position (until you miss or reach max mana). Recover 1 mana for each destroyed spawn.",
 			"stats": ["Damage: 1", "", "", ""]
 		},
 		{
@@ -329,7 +329,7 @@
 			"manaCost": 3,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "Attack (can verge). If you hit a player/spawn, return to your previous position and repeat the process (until you miss).",
+			"description": "Basic attack (can verge). If you hit a player/spawn, return to your previous position and repeat the process (until you miss).",
 			"stats": ["Damage: 1-4", "Max Hits: 4", "", ""]
 		},
 		{
@@ -356,7 +356,7 @@
 			"manaCost": 4,
 			"slotCost": 2,
 			"sortingType": ["damage"],
-			"description": "On first turn, your marble flies up into the sky where it can’t be hit by attacks. On next turn, drop on the target, only dealing spash damage. Take 1 damage if you miss. Uses 2 turns in total.",
+			"description": "On first turn, your marble flies up into the sky where it can’t be hit by attacks. On next turn, drop on the target, only dealing spash damage. Take 1 self-damage if you miss. Uses 2 turns in total.",
 			"stats": ["Range: 4", "S.Damage: 1", "Height: 3", "S.Range: 2"]
 		},
 		{
@@ -416,7 +416,7 @@
 			"manaCost": 2,
 			"slotCost": 2,
 			"sortingType": ["summon"],
-			"description": "Create a barrier from one wall to another and summon 2 nodes on each side of the barrier. The barrier destroys only when both nodes get knocked out. Must be used close to a wall.",
+			"description": "Create a barrier from one wall to another and summon 2 nodes on each end of the barrier. The barrier destroys only when both nodes get knocked out. Must be used close to a wall.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 2", "Width: ∞", "Max 1 Barrier", ""]
@@ -551,7 +551,7 @@
 			"manaCost": 2,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "Attack an enemy. If you miss, take 1 damage.",
+			"description": "Basic attack an enemy. If you miss, take 1 self-damage.",
 			"stats": ["Damage: 2", "", "", ""]
 		},
 		{
@@ -605,7 +605,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Move all non-player entities that belong to you. Can escape after cast.",
+			"description": "Move all non-player entities that belong to you and your allies. Can escape after cast.",
 			"stats": ["Range: ∞", "", "", ""]
 		},
 		{
@@ -679,7 +679,7 @@
 			"manaCost": 5,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "Attack. Take 1 damage and end your turn if you hit a spawn.",
+			"description": "Attack. Take 1 self-damage and end your turn if you hit a spawn.",
 			"stats": ["Damage: 3", "", "", ""]
 		},
 		{
@@ -706,7 +706,7 @@
 			"manaCost": 4,
 			"slotCost": 2,
 			"sortingType": ["damage", "summon"],
-			"description": "Summon a clone of your marble and gain an extra action. You can attack with this clone up to 3 times this turn (these don't count as actions). The clone vanishes at the end of your turn.",
+			"description": "Summon a clone of your marble and gain an extra action. You can basic attack with this clone up to 3 times this turn (these don't count as actions). The clone vanishes at the end of your turn.",
 			"stats": ["P.Range: 1", "Clone Damage: 1", "", ""]
 		}
 		]
@@ -744,7 +744,7 @@
 			"description": "Recover 4 mana when a player dies.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Stackable", "", "", ""]
+			"stats": ["Unstackable", "", "", ""]
 		},
 		{
 			"name": "Dominance",
@@ -754,7 +754,7 @@
 			"description": "Recover 2 hp when a player dies.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Stackable", "", "", ""]
+			"stats": ["Unstackable", "", "", ""]
 		},
 		{
 			"name": "Grove Heart",
@@ -764,7 +764,7 @@
 			"description": "On death, transfer your remaining mana to another player and heal 2 HP to them.",
 			"upgradeText": "Takes 1 slot less, heal 3 HP on death",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Stackable", "", "", ""]
+			"stats": ["Unstackable", "", "", ""]
 		},
 		{
 			"name": "Explosive Shards",
@@ -800,7 +800,7 @@
 			"slotCost": 1,
 			"sortingType": ["protection"],
 			"description": "Gain 3 void shields, each expire after taking void damage. Regain all void shields when a player dies. You can't take lethal void damage.",
-			"stats": ["Stackable", "", "", ""]
+			"stats": ["Stackable", "Max 2 lethal damage passives", "", ""]
 		},
 		{
 			"name": "Explosive End",
@@ -834,10 +834,12 @@
 		{
 			"name": "Spellproof",
 			"rarity": "R",
-			"slotCost": 1,
+			"slotCost": 2,
 			"sortingType": ["protection"],
 			"description": "You can’t take lethal damage from enemy abilities. Can’t be combined with Durable and Spiked.",
-			"stats": ["Unstackable", "", "", ""]
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Unstackable", "Max 2 lethal damage passives", "", ""]
 		},
 		{
 			"name": "Scrap Shells",
@@ -855,7 +857,7 @@
 			"slotCost": 1,
 			"sortingType": ["mobility"],
 			"description": "On escape actions, teleport to a free location instead of moving regularly.",
-			"upgradeText": "Range: ∞",
+			"upgradeText": "Range: 5",
 			"stats": ["Unstackable", "Range: 4", "", ""]
 		},
 		{
@@ -871,7 +873,7 @@
 			"rarity": "R",
 			"slotCost": 1,
 			"sortingType": ["mana"],
-			"description": "Restore 1 mana to yourself after landing a basic attack on a player, but your basic attacks don't deal damage.",
+			"description": "Restore 1 mana to yourself after landing a basic attack on a player opponent, but your basic attacks don't deal damage to players. Can't stack with Crimson Cult.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -879,7 +881,7 @@
 			"rarity": "R",
 			"slotCost": 2,
 			"sortingType": ["hp"],
-			"description": "Recover 1 HP to yourself after landing a basic attack on a player, but your basic attacks don't deal damage.",
+			"description": "Recover 1 HP to yourself after landing a basic attack on a player opponent, but your basic attacks don't deal damage to players. Can't stack with Azure Cult.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -990,7 +992,7 @@
 			"description": "Your marble can’t take lethal damage from basic attacks. Can’t stack with Spellproof.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Unstackable", "", "", ""]
+			"stats": ["Unstackable", "Max 2 lethal damage passives", "", ""]
 		},
 		{
 			"name": "Eagle Eye",
@@ -1015,7 +1017,7 @@
 			"rarity": "L",
 			"slotCost": 2,
 			"sortingType": ["death", "hp"],
-			"description": "After your marble is destroyed, trigger all on-death effects, respawn anywhere with 1 hp and discard this card (turn skip still counts if the next turn is yours). Stacking increases respawn count.",
+			"description": "After your marble is destroyed, trigger all on-death effects, respawn anywhere with 1 hp and discard this card. Stacking increases respawn count.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Stackable", "", "", ""]
@@ -1047,11 +1049,11 @@
 			"stats": ["Unstackable", "A.Range: 2", "", ""]
 		},
 		{
-			"name": "Morphosis",
+			"name": "Metamorphosis",
 			"rarity": "C",
 			"slotCost": 1,
-			"sortingType": ["hp"],
-			"description": "You can skip a turn without acting or moving (will still give you mana). The following turns that you skip without being moved, damaged, or performing any other actions will regenerate 1 HP to you.",
+			"sortingType": ["hp", "misc"],
+			"description": "You can skip all your actions at the start of your turn. Skipping generates 1 charge. When skipping at 1 charges or above, recover 1 HP. On 5 charges, discard this card and permanently make all your missed attacks count as verges. Lose all charges if you take damage, move, or do an action.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
@@ -1167,7 +1169,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"description": "This card gains 1 charge whenever an item is used. On 1 charge, discharge and gain back one of your used 1-slot items. The amount of required charges increases with each living player.",
+			"description": "This card gains 1 charge whenever an item is used. On 2 charges, discharge and gain back one of your used 1-slot items. The amount of required charges increases with each other living player.",
 			"stats": ["Stackable", "", "", ""]
 		},
 		{
@@ -1178,7 +1180,7 @@
 			"description": "You can’t take lethal damage from non-player entities.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
-			"stats": ["Unstackable", "", "", ""]
+			"stats": ["Unstackable", "Max 2 lethal damage passives", "", ""]
 		},
 		{
 			"name": "Crimson Pendant",
@@ -1276,7 +1278,7 @@
 			"rarity": "L",
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
-			"description": "Your missing HP acts as additional mana storage. When healing HP units that are occupied by mana, empty that mana and summon 2 living mines per emptied mana.",
+			"description": "Your missing HP acts as additional mana storage. When healing HP units that are occupied by mana, empty that mana and summon 2 living mines per emptied mana. Gain mana for each unit of self-damage that you take at max mana.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "P.Range: 1", "", ""]
@@ -1338,7 +1340,7 @@
 		},
 		{
 			"name": "Typewriter at the End of Time",
-			"description": "When a player uses an ability or item card, save the first and last letter of its name to this card. You can use these letters to try to spell a card name during your turns (can repeat same unlocked letters). When you have enough letters unlocked to spell a name of a card (without spaces or special characters), you gain that card for 0 slot cost and with all upgrades. Discard the used letters from this card.",
+			"description": "When a player uses an ability or item card, save one free letter of its name to this card. You can use these letters to try to spell a card name during your turns (can repeat same unlocked letters). When you have enough letters unlocked to spell a name of a card (without spaces or special characters), you gain that card for 0 slot cost and with all upgrades. Discard the used letters from this card.",
 			"rarity": "L",
 			"slotCost": 1,
 			"sortingType": ["misc"],
@@ -1376,7 +1378,7 @@
 		},
 		{
 			"name": "Guardian Mine",
-			"description": "Summon a special mine at the start of the game. This mine teleports next to you at the end of your every turn.",
+			"description": "Summon a special mine at the start of the game. This mine teleports within its placement range of you at the start and end of your every turn.",
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["summon", "protection"],
@@ -1474,7 +1476,7 @@
 			"name": "Brew of The Dead",
 			"slotCost": 2,
 			"sortingType": ["death"],
-			"description": "Sacrifice 1 HP and activate all your on-death effects. Can escape after cast. Can’t be used if you have 1 HP left.",
+			"description": "Reduce your max HP by 1 and activate all your on-death effects. Can escape after cast. Can’t be used if you have 1 max HP left.",
 			"stats": ["Sacrifice: 1", "Free Use", "", ""]
 		},
 		{
@@ -1593,7 +1595,7 @@
 			"name": "Black Hole Propulsion",
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Drop all on-field spawns on your marble. These entities can move your marble. They deal/take no damage until the last one stops. If you hit a player during this action, take 1 damage and cancel your turn.",
+			"description": "Drop all on-field spawns on your marble. These entities can move your marble. They deal/take no damage until the last one stops. If you hit a player during this action, take 1 self-damage and cancel your turn.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1642,7 +1644,7 @@
 			"name": "Pocket Star",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"description": "Remove all temporary negative effects from you (blind, ichor, venom etc.). Ignore void damage until the end of your turn.",
+			"description": "Remove all temporary negative effects from you (blind, poison, card block, etc). Ignore void damage until the start of your next turn.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1703,10 +1705,10 @@
 		},
 		{
 			"name": "Rewind Cassette",
-			"slotCost": 1,
-			"sortingType": ["mobility"],
-			"description": "Mark your current position. At the end of your turn, return your marble to the marked position and optionally escape.",
-			"stats": ["", "Free Use", "", ""]
+			"slotCost": 2,
+			"sortingType": ["misc"],
+			"description": "Undo your most recent action and rewind everything back to the beginning of that action.",
+			"stats": ["", "Use at End", "", ""]
 		}
 		]
 	},
