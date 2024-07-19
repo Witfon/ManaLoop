@@ -127,8 +127,6 @@
 			"slotCost": 1,
 			"sortingType": ["mobility"],
 			"description": "Move all entities away from your marble, but no further than max range from the epicenter (can collide entities into each other). Can be used instead of escape.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 4", "", "", ""]
 		},
 		{
@@ -480,9 +478,9 @@
 			"name": "Master Strike",
 			"rarity": "C",
 			"manaCost": 1,
-			"slotCost": 1,
+			"slotCost": 2,
 			"sortingType": ["damage"],
-			"description": "An attack that deals 1 additional damage for each time your marble bounces off a wall or a barrier.",
+			"description": "An attack that deals 1 additional damage for each time your marble bounces off a wall or a barrier. Resets damage to 1 after damaging an entity.",
 			"stats": ["Damage: 1+", "Max Damage: 3", "", ""]
 		},
 		{
