@@ -29,7 +29,9 @@
 			"manaCost": 4,
 			"sortingType": ["damage"],
 			"description": "Shoot a projectile.",
-			"stats": ["Range: 5", "Damage: 1", "", ""]
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
+			"stats": ["Range: 4", "Damage: 1", "", ""]
 		},
 		{
 			"name": "Star Storm",
@@ -250,7 +252,7 @@
 			"manaCost": 4,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "An attack that deals splash damage around its trail. Take 1 self-damage if you land a physical hit on a spawn or a player while performing this attack. The hit entity takes 1 additional damage.",
+			"description": "An attack that deals splash damage around its trail. Physical hits deal 1 more damage, but you take 1 self-damage if you land a physical hit on a spawn or a player while performing this attack.",
 			"stats": ["S.Range: 1", "Damage: 1", "S.Damage: 1", ""]
 		},
 		{
@@ -290,7 +292,7 @@
 			"slotCost": 1,
 			"sortingType": ["mana", "summon"],
 			"description": "You are immune to all damage this turn, but your attacks can’t damage players. Attack a spawn. If you hit, repeat this action from hit position (until you miss or reach max mana). Recover 1 mana for each destroyed spawn.",
-			"stats": ["Damage: 1", "", "", ""]
+			"stats": ["Damage: 1", "Max Hits: 10", "", ""]
 		},
 		{
 			"name": "Convert",
@@ -327,7 +329,7 @@
 			"manaCost": 3,
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "Basic attack (can verge). If you hit a player/spawn, return to your previous position and repeat the process (until you miss).",
+			"description": "Basic attack (can verge). If you hit a player/spawn, return to your previous position and repeat the attack (until you miss).",
 			"stats": ["Damage: 1-4", "Max Hits: 4", "", ""]
 		},
 		{
@@ -462,8 +464,8 @@
 			"manaCost": 4,
 			"slotCost": 2,
 			"sortingType": ["damage", "hp"],
-			"description": "Attack a player 3 times without changing your position or dealing damage. If you hit 3 times, damage the target, reduce their max mana by 1, and spawn three hp nodes around them.",
-			"stats": ["Damage: 3", "P.Range: 1", "", ""]
+			"description": "Attack a player and let them escape, allowing you to attack the same player again if you hit. Consecutive hits deal no damage but trigger escape and heal you 1 HP. You and hit player are immune to spawn damage this turn. Hitting an ally will instantly kill them.",
+			"stats": ["Damage: 1", "Max Hits: 5", "", ""]
 		},
 		{
 			"name": "Time Leap",
@@ -481,7 +483,7 @@
 			"slotCost": 2,
 			"sortingType": ["damage"],
 			"description": "An attack that deals 1 additional damage for each time your marble bounces off a wall or a barrier. Resets damage to 1 after damaging an entity.",
-			"stats": ["Damage: 1+", "Max Damage: 3", "", ""]
+			"stats": ["Damage: 1+", "Max Damage per Hit: 3", "", ""]
 		},
 		{
 			"name": "Flamethrower",
@@ -511,7 +513,7 @@
 			"manaCost": 3,
 			"slotCost": 1,
 			"sortingType": ["misc", "damage"],
-			"description": "Create an explosion (deals no damage). All affected players will take 1 more damage from the next damage source. All affected special mines and nodes are converted into regular mines.",
+			"description": "Create an explosion (deals no damage). All affected players will take 1 more damage from the next damage source. All affected spawns are converted into nodes without effects. Escape after cast.",
 			"stats": ["Range: 3", "S.Range: 2", "", ""]
 		},
 		{
@@ -521,9 +523,7 @@
 			"slotCost": 1,
 			"sortingType": ["damage"],
 			"description": "Fly your marble up in the air above your position and toss it at your target. Can only damage players that are in range.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
-			"stats": ["Range: 2", "Damage: 2", "Height: 1", ""]
+			"stats": ["Range: 3", "Damage: 2", "Height: 2", ""]
 		},
 		{
 			"name": "Shockwave",
@@ -540,7 +540,7 @@
 			"manaCost": 3,
 			"slotCost": 1,
 			"sortingType": ["damage", "misc"],
-			"description": "Attack a target. The target will take 1 extra soft damage on your next turn. Players that die from this ability won't trigger their on-death effects.",
+			"description": "Attack a target. The target will take 1 extra soft damage on your next turn. Players that die from this ability won't trigger their on-death effects and will transfer their unused items to you.",
 			"stats": ["Damage: 1+1", "Effect", "", ""]
 		},
 		{
@@ -558,7 +558,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["mobility"],
-			"description": "All entities are moved to the closest wall or barrier. Use a basic attack after cast.",
+			"description": "All entities are moved to the closest wall or barrier. Gain an extra action after cast.",
 			"stats": ["Range: ∞", "", "", ""]
 		},
 		{
@@ -567,7 +567,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Summon an immune node and give yourself an extra action. When a second node is summoned, they get linked. Hiting the effect area of one teleport you to the other one, from which you can reset your attack range (max 1 tp per turn, also works for your projectiles). Only players with this card can use the portals.",
+			"description": "Summon an immune node and give yourself an extra action. When a second node is summoned, they get linked. Hiting the effect area of one teleport you to the effect area of the other, from which you can reset your attack range (max 1 tp per turn, also works for your projectiles). Only players with this card can use the portals.",
 			"stats": ["P.Range: 4", "A.Range: 1", "Max portal pairs: 1", ""]
 		},
 		{
@@ -592,9 +592,11 @@
 			"name": "Dark Wind",
 			"rarity": "C",
 			"manaCost": 2,
-			"slotCost": 1,
+			"slotCost": 2,
 			"sortingType": ["misc", "damage"],
 			"description": "Blind all other players and double the damage that they receive until your next turn. Can escape after cast.",
+			"upgradeText": "Takes 1 slot less",
+			"upgradeEffect": {"slots": 1},
 			"stats": ["Range: 5", "", "", ""]
 		},
 		{
@@ -622,6 +624,7 @@
 			"slotCost": 1,
 			"sortingType": ["misc", "damage", "summon"],
 			"description": "Enrich ALL non-player entities in an area (mines, barriers, etc.), giving them +1 contact damage. Use a basic attack after cast.",
+			"upgradeText": "A.Range: 2",
 			"stats": ["Range: 3", "A.Range: 1", "", ""]
 		},
 		{
@@ -659,7 +662,7 @@
 			"manaCost": 1,
 			"slotCost": 1,
 			"sortingType": ["summon", "misc"],
-			"description": "Summon an immune node and use a basic attack. The node creates a copy of any allied projectile that hits it and resets the range of both. These projectiles can't have the same entity as their next target. Area effects of these projectiles can't affect same target twice. These projectiles hit their final target(s) simultaneously.",
+			"description": "Summon an immune node and use a basic attack. The node creates a copy of any allied projectile that hits it and resets the range of both. These projectiles can't have the same entity/wall as their next target. Area effects of these projectiles can't affect same target twice. These projectiles hit their final target(s) simultaneously.",
 			"stats": ["P.Range: 4", "Max Prisms: 1", "", ""]
 		},
 		{
@@ -797,7 +800,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["protection"],
-			"description": "Gain 3 void shields, each expire after taking void damage. Regain all void shields when a player dies. You can't take lethal void damage.",
+			"description": "Gain 3 void shields, each expire after taking void damage. Gain 1 void shield after landing a physical ability. You can't take lethal void damage.",
 			"stats": ["Stackable", "Max 2 lethal damage passives", "", ""]
 		},
 		{
@@ -903,11 +906,9 @@
 		{
 			"name": "Loaded Up",
 			"rarity": "C",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["mana"],
-			"description": "Start the game with 3 charged mana.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
+			"description": "Start the game with 4 charged mana.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -923,7 +924,7 @@
 			"rarity": "L",
 			"slotCost": 3,
 			"sortingType": ["misc"],
-			"description": "Taking damage won't trigger an escape turn. You'll still gain mana after taking damage during opponent turns.",
+			"description": "Taking damage won't trigger an escape turn and you don't have to escape after taking damage.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
@@ -968,7 +969,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["protection", "summon"],
-			"description": "Your mines can only take damage from physical attacks.",
+			"description": "Your mines can only take damage from physical player attacks.",
 			"upgradeText": "Takes 1 slot less",
 			"upgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
@@ -1107,7 +1108,7 @@
 		{
 			"name": "Second Breath",
 			"rarity": "R",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"description": "All your physical abilities can verge (once for each shot).",
 			"stats": ["Unstackable", "", "", ""]
@@ -1143,7 +1144,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["protection"],
-			"description": "Your marble can't be affected by status effects (blind, stun, ichor etc.), unless you use an ability/item that places a status effect on you during your turn.",
+			"description": "Your marble can't be affected by status effects (blind, stun, ichor etc.), unless you use a card that places a status effect on you during your turn.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1151,7 +1152,7 @@
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"description": "When your marble lands a basic attack, blind the target for 1 of their turns.",
+			"description": "When your marble lands a physical attack, blind the target until the start of their turn.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1159,7 +1160,7 @@
 			"rarity": "R",
 			"slotCost": 2,
 			"sortingType": ["misc"],
-			"description": "When your marble is hit by a basic attack, blind the attacker for 1 of their turns.",
+			"description": "When your marble is hit by a basic attack, blind the attacker until the end of their next turn.",
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1219,11 +1220,11 @@
 		{
 			"name": "Valley of Monuments",
 			"rarity": "R",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["protection", "summon"],
 			"description": "Mines that you summon are immune.",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
+			"downgradeText": "Takes 1 slot more",
+			"downgradeEffect": {"slots": 1},
 			"stats": ["Unstackable", "", "", ""]
 		},
 		{
@@ -1231,9 +1232,7 @@
 			"rarity": "R",
 			"slotCost": 1,
 			"sortingType": ["hp"],
-			"description": "Doubles your max HP but you take double damage from other player attacks (does not affect damage from non-player entities and void damage).",
-			"upgradeText": "Takes 1 slot less",
-			"upgradeEffect": {"slots": 1},
+			"description": "Doubles your max HP and healing you receive, but you take double damage from other player attacks (does not affect damage from non-player entities and void damage).",
 			"stats": ["Unstackable", "", "", ""],
 			"specialEffects": ["double hp"]
 		},
@@ -1366,7 +1365,7 @@
 		},
 		{
 			"name": "Shadow Dive",
-			"description": "You can't take damage from basic attacks that are launched within Range 1 of you.",
+			"description": "You can't take damage from basic attacks that are launched within Range 2 of you.",
 			"rarity": "C",
 			"slotCost": 1,
 			"sortingType": ["protection"],
@@ -1404,7 +1403,7 @@
 			"name": "Adrenaline",
 			"slotCost": 1,
 			"sortingType": ["damage"],
-			"description": "If your basic attack hits this turn (on any entity), repeat it on a different target from hit position. Can't damage same targets twice. Repeat this until you miss or escape.",
+			"description": "If your basic attack hits this turn (on any entity), repeat it on a different target from hit position. Can't damage same targets twice. Repeat this until you miss.",
 			"stats": ["", "Use at Start", "", ""]
 		},
 		{
@@ -1412,7 +1411,7 @@
 			"slotCost": 1,
 			"sortingType": ["summon"],
 			"description": "Dispense all your mana in form of mines.",
-			"stats": ["P.Range: 5", "Use at Start", "", ""]
+			"stats": ["P.Range: ∞", "Free Use", "", ""]
 		},
 		{
 			"name": "Nullification Script",
@@ -1446,7 +1445,7 @@
 			"name": "Ballistic Net",
 			"slotCost": 2,
 			"sortingType": ["misc"],
-			"description": "Stuns another player, making them unable to move during their next turn (they can still generate mana).",
+			"description": "Stuns another player, making them unable to move during their next turn.",
 			"stats": ["Range: 5", "Free Use", "", ""]
 		},
 		{
@@ -1475,13 +1474,13 @@
 			"slotCost": 2,
 			"sortingType": ["death"],
 			"description": "Reduce your max HP by 1 and activate all your on-death effects. Can escape after cast. Can’t be used if you have 1 max HP left.",
-			"stats": ["Sacrifice: 1", "Free Use", "", ""]
+			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Dragon Scale",
 			"slotCost": 1,
 			"sortingType": ["protection"],
-			"description": "Ignore first external damage instance until end of your turn.",
+			"description": "Ignore damage from non-player entities until the end of your turn.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1502,8 +1501,8 @@
 			"name": "Chaos Script",
 			"slotCost": 1,
 			"sortingType": ["summon"],
-			"description": "All players empty one mana. Summon a mine near each affected player",
-			"stats": ["P.Range: 2", "Use at Start", "", ""]
+			"description": "All players empty one mana. Summon a mine near each player.",
+			"stats": ["P.Range: 3", "Use at Start", "", ""]
 		},
 		{
 			"name": "Dust Wall",
@@ -1524,7 +1523,7 @@
 			"slotCost": 2,
 			"sortingType": ["mobility"],
 			"description": "Switch places with another player.",
-			"stats": ["Range: 5", "Use at Start", "", ""]
+			"stats": ["Range: ∞", "Use at Start", "", ""]
 		},
 		{
 			"name": "Upgrade Injection",
@@ -1537,8 +1536,8 @@
 			"name": "Impulse Script",
 			"slotCost": 1,
 			"sortingType": ["mobility"],
-			"description": "Teleport select entities away from your position (can’t teleport into the void).",
-			"stats": ["Range: ∞", "Free Use", "Distance: 3", ""]
+			"description": "Teleport all non-player entities to any position within range.",
+			"stats": ["Range: 3", "Free Use", "", ""]
 		},
 		{
 			"name": "Cursed Touch",
@@ -1579,7 +1578,7 @@
 			"name": "Detonate",
 			"slotCost": 1,
 			"sortingType": ["damage", "summon"],
-			"description": "Pick a mine. Destroy the mine and deal 1 damage to everything around it.",
+			"description": "Pick a mine. Destroy the mine and deal 1 damage to everything around it (can damage you).",
 			"stats": ["Range: 3", "Basic Turn", "S.Range: 2", ""]
 		},
 		{
@@ -1593,7 +1592,7 @@
 			"name": "Black Hole Propulsion",
 			"slotCost": 1,
 			"sortingType": ["mobility", "summon"],
-			"description": "Drop all on-field spawns on your marble. These entities can move your marble. They deal/take no damage until the last one stops. If you hit a player during this action, take 1 self-damage and cancel your turn.",
+			"description": "All spawns can be flicked at your marble this turn (once per spawn). Ignore damage from flicked spawns this turn and spawns that they knock you into.",
 			"stats": ["", "Free Use", "", ""]
 		},
 		{
@@ -1649,8 +1648,8 @@
 			"name": "Pocket Clover",
 			"slotCost": 1,
 			"sortingType": ["misc"],
-			"description": "If you missed an attack this turn, redo it once. Effect wears out after triggering.",
-			"stats": ["", "Use at Start", "", ""]
+			"description": "If you missed an attack this turn, redo it once. Effect wears out after triggering. Only works for attacks that were cast under this effect.",
+			"stats": ["", "Free Use", "", ""]
 		},
 		{
 			"name": "Pocket Mines",
@@ -1703,7 +1702,7 @@
 		},
 		{
 			"name": "Rewind Cassette",
-			"slotCost": 2,
+			"slotCost": 1,
 			"sortingType": ["misc"],
 			"description": "Undo your most recent action and rewind everything back to the beginning of that action.",
 			"stats": ["", "Use at End", "", ""]
